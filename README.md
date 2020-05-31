@@ -1,26 +1,22 @@
 # Umbraco Meganav
 
-[![Build status](https://ci.appveyor.com/api/projects/status/xi37v81yqo7vhg4d/branch/master?svg=true)](https://ci.appveyor.com/project/Cogworks/meganav/branch/master)
-[![NuGet release](https://img.shields.io/nuget/v/Cogworks.Meganav.svg)](https://www.nuget.org/packages/Cogworks.Meganav)
-[![Our Umbraco project page](https://img.shields.io/badge/our-umbraco-orange.svg)](https://our.umbraco.org/projects/website-utilities/meganav/)
-
-A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco 7.
+A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco 8.
 
 ## Getting started
 
-This package is supported on Umbraco 7.4+.
+This package is supported on Umbraco 8.4+.
 
 ### Installation
 
 Meganav is available from Our Umbraco, NuGet, or as a manual download directly from GitHub.
 
 #### Our Umbraco repository
-You can find a downloadable package, along with a discussion forum for this package, on the [Our Umbraco](https://our.umbraco.org/projects/website-utilities/meganav/) site.
+You can find a downloadable package, along with a discussion forum for this package, on the [Our Umbraco](#) site.
 
 #### NuGet package repository
-To [install from NuGet](https://www.nuget.org/packages/Cogworks.Meganav/), run the following command in your instance of Visual Studio.
+To [install from NuGet](#), run the following command in your instance of Visual Studio.
 
-    PM> Install-Package Cogworks.Meganav
+    PM> Install-Package #
 
 ## Usage
 
