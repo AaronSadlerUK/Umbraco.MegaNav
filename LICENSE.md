@@ -1,4 +1,5 @@
 MIT License
+
 Copyright (c) 2020 Callum Whyte
 
 Copyright (c) 2020 Aaron Sadler
