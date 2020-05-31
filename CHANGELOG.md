@@ -4,11 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [8.0.0] - DATETBC
-### Fixed
+### Added
+* Umbraco V8 support - Added in V2.0.0 by Callum Whyte
+* Added support for querystrings / anchors
+
+### Changed
 * Renamed to MegaNavV8 to be separate from the original MegaNav plugin
+
+### Fixed
 * Added support for querystrings / anchors
 * Changed to use UDI instead of ID to work with Umbraco Cloud Deploy
-* Umbraco V8 support - Added in V2.0.0 by Callum Whyte
 
 ## [1.1.2] - 2018-20-08
 ### Fixed
