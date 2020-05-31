@@ -1,6 +1,10 @@
-# Umbraco Meganav
+# Umbraco MeganavV8
 
 A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco 8.
+
+This based on [MegaNav V2.0.0](https://github.com/callumbwhyte/meganav/releases/tag/v2.0.0) by [Callum Whyte](https://our.umbraco.com/members/id:152036/), I have changed it to use UDI instead of ID and it now supports querystrings / anchor urls.
+
+All credit for the initial plugin goes to [Callum Whyte](https://our.umbraco.com/members/id:152036/).
 
 ## Getting started
 
@@ -8,10 +12,7 @@ This package is supported on Umbraco 8.4+.
 
 ### Installation
 
-Meganav is available from Our Umbraco, NuGet, or as a manual download directly from GitHub.
-
-#### Our Umbraco repository
-You can find a downloadable package, along with a discussion forum for this package, on the [Our Umbraco](#) site.
+MeganavV8 is available from Our Umbraco, NuGet, or as a manual download directly from GitHub.
 
 #### NuGet package repository
 To [install from NuGet](#), run the following command in your instance of Visual Studio.
@@ -20,11 +21,11 @@ To [install from NuGet](#), run the following command in your instance of Visual
 
 ## Usage
 
-After installing the package, you'll be able to create a new Data Type based on _Cogworks.Meganav_ via the Umbraco backoffice.
-
-![Meganav Data Type](docs/img/prevalue-editor.jpg?raw=true)
+After installing the package, you will have a new property editor called MegaNav in the Umbraco backoffice.
 
 Here you can configure the "Max depth" of the navigation - the maximum number of levels deep at which an editor can place nav items. You also have the option to prevent nav items where the _umbracoNaviHide_ property has been set from rendering on the front-end - these items will still appear in the backoffice but not on your website, you can still edit or change them as you wish. By default both of these settings are left unset.
+
+Now in V8 you can set the querystring / anchor in a seperate input box the same way as the MultiUrlPicker.
 
 Now your Data Type is ready, we need to add it to a Document Type. This is done in the usual way - you will find Meganav appears in the "pickers" section when selecting a property to add.
 
@@ -53,14 +54,7 @@ Check out the [integration guide](docs/integration-guide.md) to learn how to emb
 To raise a new bug, create an issue on the GitHub repository. To fix a bug or add new features, fork the repository and send a pull request with your changes. Feel free to add ideas to the repository's issues list if you would to discuss anything related to the package.
 
 ### Who do I talk to?
-This project is maintained by [Cogworks](https://thecogworks.com/) and contributors. If you have any questions about the project please contact us through the forum on Our Umbraco, on [Twitter](https://twitter.com/cogworks), or by raising an issue on GitHub.
-
-## Coming soon
-
-* Umbraco Cloud / Courier support
-* Collapsable tree sections
-* Multi-lingual support
-* More...!
+This project is maintained by [Aaron Sadler](https://aaronsadler.uk) and contributors. If you have any questions about the project please contact me through on [Twitter](https://twitter.com/AaronSadlerUK), or by raising an issue on GitHub.
 
 ## Credits
 
@@ -68,13 +62,10 @@ Meganav uses a _slightly_ modified version of [Angular UI Tree](https://github.c
 
 ### A special #h5yr to our contributors
 
-* [Marcin Zajkowski](https://twitter.com/zajkowskimarcin)
-* [Arnold Visser](https://twitter.com/aim24)
-* [Robin Neal](https://twitter.com/SudoCat429)
-* [Lee Kelleher](https://twitter.com/leekelleher)
+* [Callum Whyte](https://github.com/callumbwhyte)
 
 ## License
 
-Copyright &copy; 2017 [The Cogworks Ltd](http://www.thecogworks.com/), and other contributors
+Copyright &copy; 2020 [Callum Whyte](https://github.com/callumbwhyte) & [Aaron Sadler](https://aaronsadler.uk), and other contributors
 
 Licensed under the MIT License.
