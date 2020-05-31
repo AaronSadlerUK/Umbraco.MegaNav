@@ -302,6 +302,13 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\App_Plugins\Meganav\Css\editor.css" />
+    <Content Include="App_Plugins\App_Plugins\Meganav\Js\angular-ui-tree.js" />
+    <Content Include="App_Plugins\App_Plugins\Meganav\Js\meganav.controller.js" />
+    <Content Include="App_Plugins\App_Plugins\Meganav\Js\meganav.resource.js" />
+    <Content Include="App_Plugins\App_Plugins\Meganav\package.manifest" />
+    <Content Include="App_Plugins\App_Plugins\Meganav\Views\editor.html" />
+    <Content Include="App_Plugins\App_Plugins\Meganav\Views\settings.html" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
     <Content Include="config\Lang\da-DK.user.xml" />
@@ -366,6 +373,7 @@
     <Content Include="config\HealthChecks.config" />
     <Content Include="config\ClientDependency.config" />
     <Content Include="config\BackOfficeTours\getting-started.json" />
+    <Content Include="App_Plugins\App_Plugins\Meganav\Css\editor.less" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -391,6 +399,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\src\Umbraco.MegaNav\Our.Umbraco.Meganav.csproj">
+      <Project>{238cca7f-11cf-4650-ba27-5200f1b667a9}</Project>
+      <Name>Our.Umbraco.Meganav</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
