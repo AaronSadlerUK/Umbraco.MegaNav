@@ -1,4 +1,4 @@
-﻿function MeganavV8($scope, editorService, meganavResourceV8) {
+﻿function MeganavV8($scope, editorService, meganavV8Resource) {
 
     $scope.items = [];
 
@@ -40,7 +40,7 @@
     function getItemEntities(items) {
         _.each(items, function (item) {
             if (item.udi) {
-                meganavResourceV8.getById(item.udi)
+                meganavV8Resource.getById(item.udi)
                     .then(function (response) {
                         angular.extend(item, response.data);
                     }
@@ -65,7 +65,7 @@
                     model.target.anchor = (model.target.anchor.indexOf('=') === -1 ? '#' : '?') + model.target.anchor;
                 }
                 if (model.target.udi) {
-                    meganavResourceV8.getById(model.target.udi)
+                    meganavV8Resource.getById(model.target.udi)
                         .then(function (response) {
                             // merge metadata
                             angular.extend(model.target, response.data);
@@ -88,7 +88,14 @@
         editorService.open(settingsEditor);
     }
 
-    function buildNavItem (data) {
+    function buildNavItem(data) {
+        var url;
+        if (data.anchor) {
+            url = data.url + data.anchor;
+        } else {
+            url = data.url;
+        }
+
         return {
             id: data.id,
             udi: data.udi,
@@ -96,7 +103,7 @@
             title: data.title,
             target: data.target,
             queryString: data.anchor,
-            url: data.url + data.anchor|| "#",
+            url: url || "#",
             children: data.children || [],
             icon: data.icon || "icon-link",
             published: data.published,

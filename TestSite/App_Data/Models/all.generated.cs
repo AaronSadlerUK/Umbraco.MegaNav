@@ -6,8 +6,8 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "8d563b34f4c93ed7")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "91bb92def4f86eee")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 
 // FILE: models.generated.cs
@@ -991,11 +991,11 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Mega Nav
+		/// MegaNav V8
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]
-		[ImplementPropertyType("megaNav")]
-		public string MegaNav => this.Value<string>("megaNav");
+		[ImplementPropertyType("megaNavV8")]
+		public global::System.Collections.Generic.IEnumerable<global::Our.Umbraco.MeganavV8.Models.MeganavV8Item> MegaNavV8 => this.Value<global::System.Collections.Generic.IEnumerable<global::Our.Umbraco.MeganavV8.Models.MeganavV8Item>>("megaNavV8");
 	}
 
 	/// <summary>Folder</summary>
