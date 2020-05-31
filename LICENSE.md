@@ -1,7 +1,5 @@
 MIT License
 
-Copyright (c) 2017 The Cogworks Ltd
-
 Copyright (c) 2020 AaronSadlerUK
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
