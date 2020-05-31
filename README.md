@@ -54,7 +54,7 @@ Check out the [integration guide](docs/integration-guide.md) to learn how to emb
 To raise a new bug, create an issue on the GitHub repository. To fix a bug or add new features, fork the repository and send a pull request with your changes. Feel free to add ideas to the repository's issues list if you would to discuss anything related to the package.
 
 ### Who do I talk to?
-This project is maintained by [Aaron Sadler](https://aaronsadler.uk) and contributors. If you have any questions about the project please contact me through on [Twitter](https://twitter.com/AaronSadlerUK), or by raising an issue on GitHub.
+This project is maintained by [Aaron Sadler](https://aaronsadler.uk) and contributors. If you have any questions about the project please contact me through [Twitter](https://twitter.com/AaronSadlerUK), or by raising an issue on GitHub.
 
 ## Credits
 
