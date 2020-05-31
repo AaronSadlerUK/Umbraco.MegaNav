@@ -1,4 +1,4 @@
-﻿<div ng-controller="Umbraco.Editors.LinkPickerController as vm">
+﻿<div ng-controller="Umbraco.Editors.LinkPickerController as vm"  class="umb-linkpicker">
 
     <umb-editor-view>
 
@@ -12,23 +12,32 @@
         <umb-editor-container class="block-form">
             <umb-box>
                 <umb-box-content>
+                    <div ng-class="{'flex': showAnchor}">
 
-                    <umb-control-group label="@defaultdialogs_urlLinkPicker">
-                        <input type="text"
-                               localize="placeholder"
-                               placeholder="@general_url"
-                               class="umb-property-editor umb-textstring"
-                               ng-model="model.target.url"
-                               ng-disabled="model.target.id || model.target.udi" />
+                        <umb-control-group label="@defaultdialogs_urlLinkPicker" class="umb-linkpicker__url">
+                            <input type="text"
+                                   style="margin-right: 10px;"
+                                   localize="placeholder"
+                                   placeholder="@general_url"
+                                   class="umb-property-editor umb-textstring"
+                                   ng-model="model.target.url"
+                                   umb-auto-focus
+                                   ng-disabled="model.target.id || model.target.udi" />
+                        </umb-control-group>
 
-                        <input type="text"
-                               localize="placeholder"
-                               placeholder="@general_anchor"
-                               class="umb-property-editor umb-textstring"
-                               ng-model="model.target.anchor"
-                               ng-disabled="model.target.id || model.target.udi" />
-                    </umb-control-group>
+                        <umb-control-group label="@defaultdialogs_anchorLinkPicker" class="umb-linkpicker__anchor" ng-if="showAnchor">
+                            <input type="text"
+                                   list="anchors"
+                                   localize="placeholder"
+                                   placeholder="@placeholders_anchor"
+                                   class="umb-property-editor umb-textstring"
+                                   ng-model="model.target.anchor" />
 
+                            <datalist id="anchors">
+                                <option value="{{a}}" ng-repeat="a in anchorValues"></option>
+                            </datalist>
+                        </umb-control-group>
+                    </div>
                     <umb-control-group label="@general_name"
                                        ng-if="model.target.name">
                         {{model.target.name}}
