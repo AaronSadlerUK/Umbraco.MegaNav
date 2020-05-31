@@ -11,7 +11,7 @@ The following properties are available in the _MeganavItem_ class:
 | Property          | Type              | Description |
 |-------------------|-------------------|-------------|
 | Id                | Int               | The node ID of the selected content item. For external linking nav items this will be "0" |
-| Udi               | GuidUdi           | The node UDI of the selected content item. For external linking nav items this will be "0" |
+| Udi               | GuidUdi           | The node UDI of the selected content item. For external linking nav items this will be null |
 | Title             | String            | The link title, often the node name |
 | Target            | String            | The link target |
 | Url               | String            | The link url |
