@@ -61,7 +61,9 @@
             size: "small",
             currentTarget: item,
             submit: function (model) {
-
+                if (model.target.anchor && model.target.anchor[0] !== '?' && model.target.anchor[0] !== '#') {
+                    model.target.anchor = (model.target.anchor.indexOf('=') === -1 ? '#' : '?') + model.target.anchor;
+                }
                 if (model.target.udi) {
                     meganavResource.getById(model.target.udi)
                         .then(function (response) {
@@ -93,7 +95,8 @@
             name: data.name,
             title: data.title,
             target: data.target,
-            url: data.url || "#",
+            queryString: data.anchor,
+            url: data.url + data.anchor|| "#",
             children: data.children || [],
             icon: data.icon || "icon-link",
             published: data.published,

@@ -16,6 +16,7 @@ namespace Our.Umbraco.Meganav.Models
         public string Target { get; set; }
 
         public string Url { get; set; }
+        public string QueryString { get; set; }
 
         [JsonIgnore]
         public IPublishedContent Content { get; set; }
