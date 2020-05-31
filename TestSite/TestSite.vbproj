@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\src\packages\uSync.8.6.3\build\uSync.props" Condition="Exists('..\src\packages\uSync.8.6.3\build\uSync.props')" />
   <Import Project="..\src\packages\UmbracoCms.8.6.1\build\UmbracoCms.props" Condition="Exists('..\src\packages\UmbracoCms.8.6.1\build\UmbracoCms.props')" />
@@ -315,11 +315,11 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Plugins\App_Plugins\Meganav\Css\editor.css" />
-    <Content Include="App_Plugins\App_Plugins\Meganav\Js\angular-ui-tree.js" />
-    <Content Include="App_Plugins\App_Plugins\Meganav\Js\meganav.controller.js" />
-    <Content Include="App_Plugins\App_Plugins\Meganav\Js\meganav.resource.js" />
-    <Content Include="App_Plugins\App_Plugins\Meganav\package.manifest" />
+    <Content Include="App_Plugins\Meganav\Css\editor.css" />
+    <Content Include="App_Plugins\Meganav\Js\angular-ui-tree.js" />
+    <Content Include="App_Plugins\Meganav\Js\meganav.controller.js" />
+    <Content Include="App_Plugins\Meganav\Js\meganav.resource.js" />
+    <Content Include="App_Plugins\Meganav\Views\editor.html" />
     <Content Include="App_Plugins\Meganav\Views\settings.html" />
     <Content Include="App_Plugins\uSync8\backoffice\uSync8\dashboard.html" />
     <Content Include="App_Plugins\uSync8\backoffice\uSync8\uSyncDashboardController.js" />
@@ -408,6 +408,8 @@
     <Content Include="config\uSync8.config" />
     <Content Include="App_Plugins\uSync8\package.manifest" />
     <Content Include="App_Plugins\uSync8\addons.json" />
+    <Content Include="App_Plugins\Meganav\Css\editor.less" />
+    <Content Include="App_Plugins\Meganav\package.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
