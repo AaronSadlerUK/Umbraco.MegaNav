@@ -12,7 +12,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 * Renamed to MegaNavV8 to be separate from the original MegaNav plugin
 
 ### Fixed
-* Added support for querystrings / anchors
 * Changed to use UDI instead of ID to work with Umbraco Cloud Deploy
 
 ## [1.1.2] - 2018-20-08
