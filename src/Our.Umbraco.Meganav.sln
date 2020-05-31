@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.Umbraco.Meganav", "Umbraco.MegaNav\Our.Umbraco.Meganav.csproj", "{238CCA7F-11CF-4650-BA27-5200F1B667A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{238CCA7F-11CF-4650-BA27-5200F1B667A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{238CCA7F-11CF-4650-BA27-5200F1B667A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{238CCA7F-11CF-4650-BA27-5200F1B667A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{238CCA7F-11CF-4650-BA27-5200F1B667A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{238CCA7F-11CF-4650-BA27-5200F1B667A9}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{238CCA7F-11CF-4650-BA27-5200F1B667A9}.Staging|Any CPU.Build.0 = Staging|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EAE0781C-6D07-4E3C-B217-21045D0BD44A}
+	EndGlobalSection
+EndGlobal
