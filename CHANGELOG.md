@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.0.5] - 2020-06-03
+### Changed
+* Split into projects / packages, MegaNavV8.Core and MegaNavV8.Web, this now has 2 separate NuGet packages
+
 ## [8.0.1] - 2020-06-03
 ### Changed
 * Changed dependencies from UmbracoCms to UmbracoCms.Web and UmbracoCms.Core

@@ -1,4 +1,4 @@
-﻿namespace Our.Umbraco.MeganavV8.Enums
+﻿namespace Our.Umbraco.MeganavV8.Core.Enums
 {
     public enum ItemType
     {

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
-using Our.Umbraco.MeganavV8.Enums;
+using Our.Umbraco.MeganavV8.Core.Enums;
 using Umbraco.Core;
 using Umbraco.Core.Models.PublishedContent;
 
-namespace Our.Umbraco.MeganavV8.Models
+namespace Our.Umbraco.MeganavV8.Core.Models
 {
     public class MeganavV8Item
     {

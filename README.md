@@ -15,9 +15,13 @@ This package is supported on Umbraco 8.4+.
 MeganavV8 is available from [Our Umbraco](https://our.umbraco.com/packages/website-utilities/umbracomeganavv8/), [NuGet](https://www.nuget.org/packages/AaronSadler.MegaNavV8/), or as a manual download directly from GitHub.
 
 #### NuGet package repository
-To [install from NuGet](https://www.nuget.org/packages/AaronSadler.MegaNavV8/), run the following command in your instance of Visual Studio.
+To [install UI from NuGet](https://www.nuget.org/packages/AaronSadler.MegaNavV8.Web/), run the following command in your instance of Visual Studio.
 
-    PM> Install-Package AaronSadler.MegaNavV8
+    PM> Install-Package AaronSadler.MegaNavV8.Web
+	
+To [install Core from NuGet](https://www.nuget.org/packages/AaronSadler.MegaNavV8.Core/), run the following command in your instance of Visual Studio.
+
+    PM> Install-Package AaronSadler.MegaNavV8.Core
 
 ## Usage
 
