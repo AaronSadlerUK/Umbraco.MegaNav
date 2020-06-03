@@ -438,6 +438,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\src\Our.Umbraco.MeganavV8.Api\Our.Umbraco.MeganavV8.Api.csproj">
+      <Project>{577f0fb6-fde2-437c-99fb-96cc8ae26ef0}</Project>
+      <Name>Our.Umbraco.MeganavV8.Api</Name>
+    </ProjectReference>
     <ProjectReference Include="..\src\Our.Umbraco.MeganavV8.Core\Our.Umbraco.MeganavV8.Core.csproj">
       <Project>{0729472f-155f-4a11-b30d-67d77eb225f3}</Project>
       <Name>Our.Umbraco.MeganavV8.Core</Name>
