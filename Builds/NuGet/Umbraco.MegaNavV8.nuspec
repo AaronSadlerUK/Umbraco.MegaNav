@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AaronSadler.MegaNavV8</id>
-    <version>8.0.0</version>
+    <version>8.0.1</version>
     <title>Umbraco.MegaNavV8</title>
     <authors>Aaron Sadler, Callum Whyte</authors>
     <owners>Aaron Sadler, Callum Whyte</owners>
@@ -12,12 +12,13 @@
     <icon>MegaNavV8-Logo.png</icon>
     <summary>A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco</summary>
     <description>A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco</description>
-    <releaseNotes><![CDATA[8.0.0 Initial release]]></releaseNotes>
+    <releaseNotes><![CDATA[8.0.1 Fixed Umbraco dependencies]]></releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>umbraco, umbraco-cms, MegaNav, MegaNav-V8</tags>
 	<dependencies>
 	  <group targetFramework=".NETFramework4.7.2">
-		  <dependency id="UmbracoCms" version="8.4.0" />
+		  <dependency id="UmbracoCms.Web" version="8.4.0" />
+		  <dependency id="UmbracoCms.Core" version="8.4.0" />
 	  </group>
     </dependencies>
   </metadata>
