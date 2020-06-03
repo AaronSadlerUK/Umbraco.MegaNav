@@ -7,7 +7,7 @@ using Umbraco.Core.Services;
 using Umbraco.Web.Editors;
 using Umbraco.Web.Mvc;
 
-namespace Our.Umbraco.MeganavV8.Web.Controllers.API
+namespace Our.Umbraco.MeganavV8.Core.Web.Controllers.API
 {
     [PluginController(Constants.PackageName)]
     public class MeganavV8EntityApiController : UmbracoAuthorizedJsonController
