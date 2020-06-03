@@ -8,5 +8,5 @@
 <!-- comment out the following line if you want to remove the root node name from the top navigation -->
 @foreach (var item in megaNavV8Items)
 {
-    <a class="nav-link" href="@item.Url" @if (!string.IsNullOrEmpty(item.Target)){<text>target="@item.Target"</text>}>@item.Title</a>}
+    <a class="nav-link" href="@item.Url" @if (!string.IsNullOrEmpty(item.Target)){<text>target="@item.Target"</text>}>@item.Title</a>
 }
