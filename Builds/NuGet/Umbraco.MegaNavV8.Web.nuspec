@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>AaronSadler.MegaNavV8.Core</id>
+    <version>8.0.2</version>
+    <title>Umbraco.MegaNavV8.Core</title>
+    <authors>Aaron Sadler, Callum Whyte</authors>
+    <owners>Aaron Sadler, Callum Whyte</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/AaronSadlerUK/Umbraco.MegaNavV8</projectUrl>
+    <icon>MegaNavV8-Logo.png</icon>
+    <summary>A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco</summary>
+    <description>A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco</description>
+    <releaseNotes><![CDATA[8.0.2 Split UI and Core into different packages]]></releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>umbraco, umbraco-cms, MegaNav, MegaNav-V8</tags>
+	<dependencies>
+	  <dependency id="Umbraco.MegaNavV8.Core" version="8.0.2" />
+    </dependencies>
+  </metadata>
+      <files>
+	  <file src="..\..\src\Our.Umbraco.MeganavV8.Web\Web\UI\App_Plugins\MeganavV8\**\*.*" target="content\App_Plugins\MeganavV8\" /> 
+      <file src="..\MegaNavV8-Logo.png"/>
+    </files>
+</package>
