@@ -1,8 +1,3 @@
-/**
- * @license Angular UI Tree v2.22.5
- * (c) 2010-2017. https://github.com/angular-ui-tree/angular-ui-tree
- * License: MIT
- */
 (function () {
     'use strict';
 
@@ -159,13 +154,6 @@
                     }
                     return 1;
                 };
-
-                /**
-                * Returns the depth of the deepest subtree under this node
-                * @param scope a TreeNodesController scope object
-                * @returns Depth of all nodes *beneath* this node. If scope belongs to a leaf node, the
-                *   result is 0 (it has no subtree).
-                */
                 function countSubTreeDepth(scope) {
                     if (!scope) {
                         return 0;
@@ -472,18 +460,6 @@
                             }
                         });
 
-                        /**
-                         * Callback checks if the destination node can accept the dragged node.
-                         * By default, ui-tree will check that 'data-nodrop-enabled' is not set for the
-                         * destination ui-tree-nodes, and that the 'max-depth' attribute will not be exceeded
-                         * if it is set on the ui-tree or ui-tree-nodes.
-                         * This callback can be overridden, but callers must manually enforce nodrop and max-depth
-                         * themselves if they need those to be enforced.
-                         * @param sourceNodeScope Scope of the ui-tree-node being dragged
-                         * @param destNodesScope Scope of the ui-tree-nodes where the node is hovering
-                         * @param destIndex Index in the destination nodes array where the source node will drop
-                         * @returns {boolean} True if the node is permitted to be dropped here
-                         */
                         callbacks.accept = function (sourceNodeScope, destNodesScope, destIndex) {
                             return !(destNodesScope.nodropEnabled || destNodesScope.$treeScope.nodropEnabled || destNodesScope.outOfDepth(sourceNodeScope));
                         };
@@ -508,56 +484,26 @@
 
                         };
 
-                        /**
-                         * Callback is fired when a node is successfully dropped in a new location
-                         * @param event
-                         */
                         callbacks.dropped = function (event) {
 
                         };
 
-                        /**
-                         * Callback is fired each time the user starts dragging a node
-                         * @param event
-                         */
                         callbacks.dragStart = function (event) {
 
                         };
 
-                        /**
-                         * Callback is fired each time a dragged node is moved with the mouse/touch.
-                         * @param event
-                         */
                         callbacks.dragMove = function (event) {
 
                         };
 
-                        /**
-                         * Callback is fired when the tree exits drag mode. If the user dropped a node, the drop may have been
-                         * accepted or reverted.
-                         * @param event
-                         */
                         callbacks.dragStop = function (event) {
 
                         };
 
-                        /**
-                         * Callback is fired when a user drops a node (but prior to processing the drop action)
-                         * beforeDrop can return a Promise, truthy, or falsy (returning nothing is falsy).
-                         * If it returns falsy, or a resolve Promise, the node move is accepted
-                         * If it returns truthy, or a rejected Promise, the node move is reverted
-                         * @param event
-                         * @returns {Boolean|Promise} Truthy (or rejected Promise) to cancel node move; falsy (or resolved promise)
-                         */
                         callbacks.beforeDrop = function (event) {
 
                         };
 
-                        /**
-                         * Callback is fired when a user toggles node (but after processing the toggle action)
-                         * @param sourceNodeScope
-                         * @param collapsed
-                         */
                         callbacks.toggle = function (collapsed, sourceNodeScope) {
 
                         };
@@ -716,12 +662,6 @@
                             scope.collapsed = false;
                         });
 
-                        /**
-                         * Called when the user has grabbed a node and started dragging it.
-                         *
-                         * @param {MouseEvent} e event that is triggered by DOM.
-                         * @return undefined?
-                         */
                         dragStart = function (e) {
 
                             //Disable right click.
@@ -1343,9 +1283,6 @@
                             }
                         };
 
-                        /**
-                         * Binds the mouse/touch events to enable drag start for this node.
-                         */
                         //This is outside of bindDragMoveEvents because of the potential for a delay setting.
                         bindDragStartEvents = function () {
                             element.bind('touchstart mousedown', function (e) {
@@ -1366,9 +1303,6 @@
                         };
                         bindDragStartEvents();
 
-                        /**
-                         * Binds mouse/touch events that handle moving/dropping this dragged node
-                         */
                         bindDragMoveEvents = function () {
                             angular.element($document).bind('touchend', dragEndEvent);
                             angular.element($document).bind('touchcancel', dragEndEvent);
@@ -1379,9 +1313,6 @@
                             angular.element($document).bind('keydown', keydownHandler);
                         };
 
-                        /**
-                         * Unbinds mouse/touch events that handle moving/dropping this dragged node.
-                         */
                         unbindDragMoveEvents = function () {
                             angular.element($document).unbind('touchend', dragEndEvent);
                             angular.element($document).unbind('touchcancel', dragEndEvent);
@@ -1461,24 +1392,10 @@
     'use strict';
 
     angular.module('ui.tree')
-
-        /**
-         * @ngdoc service
-         * @name ui.tree.service:UiTreeHelper
-         * @requires ng.$document
-         * @requires ng.$window
-         *
-         * @description
-         * angular-ui-tree.
-         */
         .factory('UiTreeHelper', ['$document', '$window', 'treeConfig',
             function ($document, $window, treeConfig) {
                 return {
 
-                    /**
-                     * A hashtable used to storage data of nodes
-                     * @type {Object}
-                     */
                     nodesData: {},
 
                     setNodeAttribute: function (scope, attrName, val) {
@@ -1504,12 +1421,6 @@
                         return null;
                     },
 
-                    /**
-                     * @ngdoc method
-                     * @methodOf ui.tree.service:$nodrag
-                     * @param  {Object} targetElm angular element
-                     * @return {Bool} check if the node can be dragged.
-                     */
                     nodrag: function (targetElm) {
                         if (typeof targetElm.attr('data-nodrag') != 'undefined') {
                             return targetElm.attr('data-nodrag') !== 'false';
@@ -1517,12 +1428,6 @@
                         return false;
                     },
 
-                    /**
-                     * Get the event object for touches.
-                     * 
-                     * @param  {MouseEvent|TouchEvent} e MouseEvent or TouchEvent that kicked off dragX method.
-                     * @return {MouseEvent|TouchEvent} Object returned as original event object.
-                     */
                     eventObj: function (e) {
                         var obj = e;
                         if (e.targetTouches !== undefined) {
@@ -1535,11 +1440,6 @@
                         return obj;
                     },
 
-                    /**
-                     * Generate object used to store data about node being moved.
-                     * 
-                     * {angular.$scope} node Scope of the node that is being moved.
-                     */
                     dragInfo: function (node) {
                         return {
                             source: node,
@@ -1664,47 +1564,14 @@
                         };
                     },
 
-                    /**
-                     * @ngdoc method
-                     * @name ui.tree#height
-                     * @methodOf ui.tree.service:UiTreeHelper
-                     *
-                     * @description
-                     * Get the height of an element.
-                     *
-                     * @param {Object} element Angular element.
-                     * @returns {String} Height
-                     */
                     height: function (element) {
                         return element.prop('scrollHeight');
                     },
 
-                    /**
-                     * @ngdoc method
-                     * @name ui.tree#width
-                     * @methodOf ui.tree.service:UiTreeHelper
-                     *
-                     * @description
-                     * Get the width of an element.
-                     *
-                     * @param {Object} element Angular element.
-                     * @returns {String} Width
-                     */
                     width: function (element) {
                         return element.prop('scrollWidth');
                     },
 
-                    /**
-                     * @ngdoc method
-                     * @name ui.tree#offset
-                     * @methodOf ui.nestedSortable.service:UiTreeHelper
-                     *
-                     * @description
-                     * Get the offset values of an element.
-                     *
-                     * @param {Object} element Angular element.
-                     * @returns {Object} Object with properties width, height, top and left
-                     */
                     offset: function (element) {
                         var boundingClientRect = element[0].getBoundingClientRect();
 
@@ -1716,18 +1583,6 @@
                         };
                     },
 
-                    /**
-                     * @ngdoc method
-                     * @name ui.tree#positionStarted
-                     * @methodOf ui.tree.service:UiTreeHelper
-                     *
-                     * @description
-                     * Get the start position of the target element according to the provided event properties.
-                     *
-                     * @param {Object} e Event
-                     * @param {Object} target Target element
-                     * @returns {Object} Object with properties offsetX, offsetY, startX, startY, nowX and dirX.
-                     */
                     positionStarted: function (e, target) {
                         var pos = {},
                             pageX = e.pageX,
