@@ -51,8 +51,6 @@
     <Content Include="Web\UI\App_Plugins\MeganavV8\Js\meganavv8.resource.js" />
     <Content Include="Web\UI\App_Plugins\MeganavV8\Views\editor.html" />
     <Content Include="Web\UI\App_Plugins\MeganavV8\Views\settings.html" />
-    <None Include="Web\UI\App_Plugins\MeganavV8\Js\meganav.resource.js" />
-    <None Include="Web\UI\App_Plugins\MeganavV8\Js\meganav.controller.js" />
     <Content Include="Web\UI\App_Plugins\MeganavV8\package.manifest" />
   </ItemGroup>
   <ItemGroup>

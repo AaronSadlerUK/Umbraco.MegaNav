@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.0.11] - 2020-06-18
+### Changed
+* Updated angular-ui-tree to v2.22.5
+
+### Fixed
+* Fixed issue where dragging would break when not in debug mode
+
 ## [8.0.10] - 2020-06-08
 ### Changed
 * Corrected included Api DLL

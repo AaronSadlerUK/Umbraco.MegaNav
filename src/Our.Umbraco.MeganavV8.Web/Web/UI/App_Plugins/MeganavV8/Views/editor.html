@@ -14,7 +14,7 @@
         </div>
 
         <!-- add nav items -->
-        <a href="" class="umb-node-preview-add" ng-click="add()" prevent-default>
+        <a href="" class="umb-node-preview-add" data-nodrag ng-click="add()" prevent-default>
             <localize key="general_add">Add</localize>
         </a>
 
@@ -26,15 +26,37 @@
         <div ui-tree-handle class="meganav-item"
              ng-class="{'meganav-item--unpublished': item.published === false, 'meganav-item--navihide': isVisible(item) === false}">
 
-            <umb-node-preview icon="item.icon"
-                              name="item.title || item.name"
-                              published="item.published"
-                              description="item.url"
-                              allow-edit="true"
-                              allow-remove="true"
-                              on-edit="edit(item)"
-                              on-remove="remove(item)">
-            </umb-node-preview>
+            <div class="umb-node-preview" ng-class="{'umb-node-preview--sortable': sortable, 'umb-node-preview--unpublished': published === false }">
+                <div class="flex">
+                    <!-- div keeps icon and nodename from wrapping -->
+                    <i ng-if="item.icon" class="umb-node-preview__icon {{ item.icon }}" aria-hidden="true"></i>
+                    <div class="umb-node-preview__content">
+
+                        <div class="umb-node-preview__name" ng-attr-title="{{item.title || item.name}}">{{ item.title || item.name }}</div>
+                        <div class="umb-node-preview__description" ng-if="item.url">{{ item.url }}</div>
+                    </div>
+                </div>
+                <div class="umb-node-preview__actions">
+                    <a class="umb-node-preview__action"
+                       title="Edit {{name}}"
+                       ng-href="{{editUrl}}"
+                       data-nodrag
+                       ng-click="edit(item)">
+                        <localize key="general_edit">Edit</localize>
+                        <span class="sr-only">{{name}}</span>
+                    </a>
+
+                    <a class="umb-node-preview__action umb-node-preview__action--red"
+                       title="Remove {{name}}"
+                       ng-href="{{removeUrl}}"
+                       data-nodrag
+                       ng-click="remove(item)">
+                        <localize key="general_remove">Remove</localize>
+                        <span class="sr-only">{{name}}</span>
+                    </a>
+                </div>
+
+            </div>
 
         </div>
 
