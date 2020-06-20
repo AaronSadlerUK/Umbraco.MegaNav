@@ -53,8 +53,5 @@
     <Content Include="Web\UI\App_Plugins\MeganavV8\Views\settings.html" />
     <Content Include="Web\UI\App_Plugins\MeganavV8\package.manifest" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Web\UI\App_Plugins\MeganavV8\Css\editor.less" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

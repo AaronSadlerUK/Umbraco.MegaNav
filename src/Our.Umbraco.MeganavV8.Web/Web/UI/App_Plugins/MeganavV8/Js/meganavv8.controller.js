@@ -26,9 +26,16 @@
     };
 
     $scope.editItem = function (item) {
-        var b = false;
-        item.collapsed = item.collapsed ? false : true;;
+        item.collapsed = item.collapsed ? false : true;
         angular.extend(item, buildNavItem(item));
+    };
+
+    $scope.collapseAll = function () {
+        _.each($scope.items, function (c) { c.collapsed = true });
+    };
+
+    $scope.expandAll = function () {
+        _.each($scope.items, function (c) { c.collapsed = false });
     };
 
     $scope.remove = function (item) {
