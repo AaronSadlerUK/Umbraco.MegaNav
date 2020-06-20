@@ -24,7 +24,7 @@ namespace Our.Umbraco.MeganavV8.Api.Controllers.API
             {
                 string entityUrl = "#";
 
-                if (entity.Published == true)
+                if (entity.Published)
                 {
                     var publishedEntity = Umbraco.Content(entity.Key);
 
