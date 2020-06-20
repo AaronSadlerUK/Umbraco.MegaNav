@@ -26,7 +26,7 @@
         <div ui-tree-handle class="meganav-item"
              ng-class="{'meganav-item--unpublished': item.published === false, 'meganav-item--navihide': isVisible(item) === false}">
 
-            <div class="umb-node-preview" ng-class="{'umb-node-preview--sortable': sortable, 'umb-node-preview--unpublished': published === false }">
+            <div class="umb-node-preview" ng-class="{'umb-node-preview--sortable': sortable, 'umb-node-preview--unpublished': published === false}">
                 <div class="flex">
                     <!-- div keeps icon and nodename from wrapping -->
                     <i ng-if="item.icon" class="umb-node-preview__icon {{ item.icon }}" aria-hidden="true"></i>
@@ -54,13 +54,21 @@
                         <localize key="general_remove">Remove</localize>
                         <span class="sr-only">{{name}}</span>
                     </a>
+                    <div class="button">
+                        <a class="btn btn-success btn-xs" ng-if="item.children && item.children.length > 0" data-nodrag ng-click="editItem(item)">
+                            <i ng-class="{
+                            'fa fa-plus': item.collapsed,
+                            'fa fa-minus': !item.collapsed
+                         }"></i>
+                        </a>
+                    </div>
                 </div>
 
             </div>
 
         </div>
 
-        <ol ui-tree-nodes ng-model="item.children">
+        <ol ui-tree-nodes ng-model="item.children" ng-show = "!item.collapsed">
 
             <li ng-repeat="item in item.children" ui-tree-node ng-include="'nav_item_template.html'"></li>
 

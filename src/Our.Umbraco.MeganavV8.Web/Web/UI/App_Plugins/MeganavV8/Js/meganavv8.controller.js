@@ -25,6 +25,12 @@
         });
     };
 
+    $scope.editItem = function (item) {
+        var b = false;
+        item.collapsed = item.collapsed ? false : true;;
+        angular.extend(item, buildNavItem(item));
+    };
+
     $scope.remove = function (item) {
         item.remove();
     };
@@ -100,6 +106,7 @@
             id: data.id,
             udi: data.udi,
             name: data.name,
+            collapsed: data.collapsed,
             title: data.title,
             target: data.target,
             queryString: data.anchor,
