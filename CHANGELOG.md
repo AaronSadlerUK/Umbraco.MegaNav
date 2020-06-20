@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 * Ability to collapse / expand tree children, the is stored and it will remember on page refresh / reload
 * Ability to deploy dependent nodes when using Umbraco Deploy
 
+### Changed
+* Refactored slightly
+
 ### Fixed
 * Fixed some incorrect namespacing
 
