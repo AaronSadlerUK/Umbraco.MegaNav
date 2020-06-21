@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/TerrabitHost/MegaNavV8/_apis/build/status/MegaNavV8-ASP.NET-CI?branchName=master)](https://dev.azure.com/TerrabitHost/MegaNavV8/_build/latest?definitionId=12&branchName=master)
+
 # Umbraco MeganavV8
 
 A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco 8.
