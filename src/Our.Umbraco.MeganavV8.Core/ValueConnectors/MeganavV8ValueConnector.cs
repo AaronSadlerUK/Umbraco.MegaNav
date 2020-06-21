@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Umbraco.Core;
@@ -32,7 +32,7 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConnectors
             return value;
         }
 
-        public IEnumerable<string> PropertyEditorAliases => new[] { "Our.Umbraco.MeganavV8" };
+        public IEnumerable<string> PropertyEditorAliases => new[] { Constants.PropertyEditorAlias };
 
 
         private static JArray ParseLinks(JArray links, ICollection<ArtifactDependency> dependencies, Direction direction)
