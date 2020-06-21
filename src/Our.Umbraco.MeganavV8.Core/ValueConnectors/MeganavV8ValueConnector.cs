@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Umbraco.Core;
@@ -45,8 +45,8 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConnectors
             {
                 if (direction == Direction.ToArtifact)
                 {
-                    GuidUdi.TryParse(link.Value<string>("udi"), out var guidUdi);
-                    if (guidUdi != default)
+                    var validUdi = GuidUdi.TryParse(link.Value<string>("udi"), out var guidUdi);
+                    if (validUdi)
                     {
                         dependencies.Add(new ArtifactDependency(guidUdi, false, ArtifactDependencyMode.Exist));
                     }
