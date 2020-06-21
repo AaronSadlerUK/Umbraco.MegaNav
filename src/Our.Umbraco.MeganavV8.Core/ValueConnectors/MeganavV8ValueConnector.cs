@@ -29,10 +29,6 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConnectors
 
         public object FromArtifact(string value, PropertyType propertyType, object currentValue)
         {
-            var rootLinks = ParseLinks(JArray.Parse(value), null, Direction.FromArtifact);
-
-            value = rootLinks.ToString(Formatting.None);
-
             return value;
         }
 
