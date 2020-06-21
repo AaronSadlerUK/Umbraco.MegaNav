@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Umbraco.Core;
@@ -22,7 +22,7 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConnectors
                 return svalue;
             }
 
-            var rootLinks = ParseLinks(JArray.Parse(svalue), dependencies, Direction.ToArtifact);
+            var rootLinks = ParseLinks(JArray.Parse(svalue), dependencies);
 
             return rootLinks.ToString(Formatting.None);
         }
@@ -35,23 +35,20 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConnectors
         public IEnumerable<string> PropertyEditorAliases => new[] { Constants.PropertyEditorAlias };
 
 
-        private static JArray ParseLinks(JArray links, ICollection<ArtifactDependency> dependencies, Direction direction)
+        private static JArray ParseLinks(JArray links, ICollection<ArtifactDependency> dependencies)
         {
             foreach (var link in links)
             {
-                if (direction == Direction.ToArtifact)
+                var validUdi = GuidUdi.TryParse(link.Value<string>("udi"), out var guidUdi);
+                if (validUdi)
                 {
-                    var validUdi = GuidUdi.TryParse(link.Value<string>("udi"), out var guidUdi);
-                    if (validUdi)
-                    {
-                        dependencies.Add(new ArtifactDependency(guidUdi, false, ArtifactDependencyMode.Exist));
-                    }
+                    dependencies.Add(new ArtifactDependency(guidUdi, false, ArtifactDependencyMode.Exist));
                 }
 
                 var children = link.Value<JArray>("children");
                 if (children != null)
                 {
-                    link["children"] = ParseLinks(children, dependencies, direction);
+                    link["children"] = ParseLinks(children, dependencies);
                 }
             }
 
