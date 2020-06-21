@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Umbraco.Core;
@@ -8,7 +8,7 @@ using Umbraco.Core.Models;
 namespace Our.Umbraco.MeganavV8.Core.ValueConnectors
 {
     /// <summary>
-    /// Represents a value connector for the Our.Umbraco.MeganavV8 property editor.
+    /// Represents a value connector for the Our.Umbraco.MeganavV8 property editor
     /// </summary>
     /// <seealso cref="IValueConnector" />
     public class MeganavV8ValueConnector : IValueConnector
