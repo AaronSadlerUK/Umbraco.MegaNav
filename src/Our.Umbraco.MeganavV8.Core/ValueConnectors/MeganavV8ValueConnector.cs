@@ -19,7 +19,7 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConnectors
             var svalue = value as string;
             if (string.IsNullOrWhiteSpace(svalue) || !svalue.DetectIsJson())
             {
-                return null;
+                return svalue;
             }
 
             var rootLinks = ParseLinks(JArray.Parse(svalue), dependencies, Direction.ToArtifact);
@@ -29,10 +29,6 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConnectors
 
         public object FromArtifact(string value, PropertyType propertyType, object currentValue)
         {
-            var rootLinks = ParseLinks(JArray.Parse(value), null, Direction.FromArtifact);
-
-            value = rootLinks.ToString(Formatting.None);
-
             return value;
         }
 
@@ -45,8 +41,8 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConnectors
             {
                 if (direction == Direction.ToArtifact)
                 {
-                    GuidUdi.TryParse(link.Value<string>("udi"), out var guidUdi);
-                    if (guidUdi != default)
+                    var validUdi = GuidUdi.TryParse(link.Value<string>("udi"), out var guidUdi);
+                    if (validUdi)
                     {
                         dependencies.Add(new ArtifactDependency(guidUdi, false, ArtifactDependencyMode.Exist));
                     }
