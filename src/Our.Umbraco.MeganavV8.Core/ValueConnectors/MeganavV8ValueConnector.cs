@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Umbraco.Core;
@@ -19,7 +19,7 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConnectors
             var svalue = value as string;
             if (string.IsNullOrWhiteSpace(svalue) || !svalue.DetectIsJson())
             {
-                return null;
+                return svalue;
             }
 
             var rootLinks = ParseLinks(JArray.Parse(svalue), dependencies, Direction.ToArtifact);
