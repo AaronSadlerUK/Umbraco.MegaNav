@@ -3,6 +3,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.0.12] - 2020-06-22
+### Added
+* Ability to collapse / expand tree children, the is stored and it will remember on page refresh / reload
+* Ability to deploy dependent nodes when using Umbraco Deploy
+
+### Changed
+* Refactored slightly
+
+### Fixed
+* Fixed some incorrect namespacing
+
 ## [8.0.11] - 2020-06-18
 ### Changed
 * Updated angular-ui-tree to v2.22.5

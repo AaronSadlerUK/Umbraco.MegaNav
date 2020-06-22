@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AaronSadler.MegaNavV8.Web</id>
-    <version>8.0.11</version>
+    <version>8.0.12</version>
     <title>Umbraco.MegaNavV8.Web</title>
     <authors>Aaron Sadler, Callum Whyte</authors>
     <owners>Aaron Sadler, Callum Whyte</owners>
@@ -12,12 +12,12 @@
     <icon>MegaNavV8-Logo.png</icon>
     <summary>A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco</summary>
     <description>A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco</description>
-    <releaseNotes><![CDATA[Fixed dragging when not in debug mode and updated angular-ui-tree dependency]]></releaseNotes>
+    <releaseNotes><![CDATA[Added support for Umbraco Deploy to transfer dependent nodes between environments, added the ability to collapse / expand tree items]]></releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>umbraco, umbraco-cms, MegaNav, MegaNav-V8</tags>
 	<dependencies>
-	  <dependency id="AaronSadler.MegaNavV8.Core" version="8.0.8" />
-	  <dependency id="AaronSadler.MegaNavV8.Api" version="8.0.9" />
+	  <dependency id="AaronSadler.MegaNavV8.Core" version="8.0.9" />
+	  <dependency id="AaronSadler.MegaNavV8.Api" version="8.0.10" />
     </dependencies>
   </metadata>
       <files>

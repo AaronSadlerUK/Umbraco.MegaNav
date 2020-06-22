@@ -408,7 +408,6 @@
     <Content Include="config\uSync8.config" />
     <Content Include="App_Plugins\uSync8\package.manifest" />
     <Content Include="App_Plugins\uSync8\addons.json" />
-    <Content Include="App_Plugins\MeganavV8\Css\editor.less" />
     <Content Include="App_Plugins\MeganavV8\package.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

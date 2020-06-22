@@ -18,7 +18,7 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConverters
         private readonly IPublishedSnapshotAccessor _publishedSnapshotAccessor;
         private readonly ILogger _logger;
 
-        private bool RemoveNaviHideItems;
+        private bool _removeNaviHideItems;
 
         public MeganavV8ValueConverter(IPublishedSnapshotAccessor publishedSnapshotAccessor, ILogger logger)
         {
@@ -44,7 +44,7 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConverters
 
             if (configuration != null)
             {
-                RemoveNaviHideItems = configuration.RemoveNaviHideItems;
+                _removeNaviHideItems = configuration.RemoveNaviHideItems;
             }
 
             try
@@ -80,7 +80,7 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConverters
                         item.ItemType = ItemType.Content;
 
                         // skip item if umbracoNaviHide enabled
-                        if (RemoveNaviHideItems && !umbracoContent.IsVisible())
+                        if (_removeNaviHideItems && !umbracoContent.IsVisible())
                         {
                             continue;
                         }
@@ -89,7 +89,7 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConverters
                         item.Content = umbracoContent;
 
                         // set title to node name if no override is set
-                        if (string.IsNullOrWhiteSpace(item.Title) == true)
+                        if (string.IsNullOrWhiteSpace(item.Title))
                         {
                             item.Title = umbracoContent.Name;
                         }
@@ -97,7 +97,7 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConverters
                 }
 
                 // process child items
-                if (item.Children.Any() == true)
+                if (item.Children.Any())
                 {
                     var childLevel = item.Level + 1;
 
