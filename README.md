@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/TerrabitHost/MegaNavV8/_apis/build/status/MegaNavV8-ASP.NET-CI?branchName=master)](https://dev.azure.com/TerrabitHost/MegaNavV8/_build/latest?definitionId=12&branchName=master)
+
 # Umbraco MeganavV8
 
 A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco 8.
@@ -12,7 +14,7 @@ This package is supported on Umbraco 8.4+.
 
 ### Installation
 
-MeganavV8 is available from [Our Umbraco](https://our.umbraco.com/packages/website-utilities/umbracomeganavv8/), [NuGet](https://www.nuget.org/packages/AaronSadler.MegaNavV8/), or as a manual download directly from GitHub.
+MeganavV8 is available from [Our Umbraco](https://our.umbraco.com/packages/website-utilities/umbracomeganavv8/), [NuGet](https://www.nuget.org/packages/AaronSadler.MegaNavV8.Web/), or as a manual download directly from GitHub.
 
 #### NuGet package repository
 To [install UI from NuGet](https://www.nuget.org/packages/AaronSadler.MegaNavV8.Web/), run the following command in your instance of Visual Studio.

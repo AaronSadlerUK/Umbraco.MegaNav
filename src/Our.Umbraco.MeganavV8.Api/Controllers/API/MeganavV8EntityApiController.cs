@@ -6,6 +6,7 @@ using Umbraco.Core;
 using Umbraco.Core.Services;
 using Umbraco.Web.Editors;
 using Umbraco.Web.Mvc;
+using Constants = Our.Umbraco.MeganavV8.Core.Constants;
 
 namespace Our.Umbraco.MeganavV8.Api.Controllers.API
 {
@@ -23,7 +24,7 @@ namespace Our.Umbraco.MeganavV8.Api.Controllers.API
             {
                 string entityUrl = "#";
 
-                if (entity.Published == true)
+                if (entity.Published)
                 {
                     var publishedEntity = Umbraco.Content(entity.Key);
 
