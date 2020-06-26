@@ -29,7 +29,7 @@ namespace Our.Umbraco.MeganavV8.Core.Models
 
         [JsonIgnore]
         public int Level { get; set; }
-        public int Collapsed { get; set; }
+        public bool Collapsed { get; set; }
 
         public GuidUdi Udi { get; set; }
 
