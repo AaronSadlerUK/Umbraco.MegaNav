@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.0.14] - 2020-06-26
+### Changed
+* Changed converter to retrieve most recent url from cache
+
 ## [8.0.13] - 2020-06-26
 ### Fixed
 * Fixed exception caused by incorrect type in value converter
