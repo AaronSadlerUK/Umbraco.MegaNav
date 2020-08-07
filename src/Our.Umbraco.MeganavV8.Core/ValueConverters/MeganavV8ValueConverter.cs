@@ -61,7 +61,7 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConverters
             return Enumerable.Empty<MeganavV8Item>();
         }
 
-        internal IEnumerable<MeganavV8Item> BuildMenu(IEnumerable<MeganavV8Item> items, int level = 0)
+        private IEnumerable<MeganavV8Item> BuildMenu(IEnumerable<MeganavV8Item> items, int level = 0)
         {
             items = items.ToList();
 
@@ -93,6 +93,9 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConverters
                         {
                             item.Title = umbracoContent.Name;
                         }
+
+                        // set url to most recent from published cache
+                        item.Url = umbracoContent.Url;
                     }
                 }
 
