@@ -53,7 +53,7 @@
     function getItemEntities(items) {
         _.each(items, function (item) {
             if (item.udi) {
-                meganavV8Resource.getById(item.udi)
+                meganavV8Resource.getById(item.udi, null, item.culture)
                     .then(function (response) {
                         angular.extend(item, response.data);
                     }
@@ -78,7 +78,7 @@
                     model.target.anchor = (model.target.anchor.indexOf('=') === -1 ? '#' : '?') + model.target.anchor;
                 }
                 if (model.target.udi) {
-                    meganavV8Resource.getById(model.target.udi)
+                    meganavV8Resource.getById(model.target.udi, model.target.url, null)
                         .then(function (response) {
                             // merge metadata
                             angular.extend(model.target, response.data);

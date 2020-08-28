@@ -1,9 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading;
 using Umbraco.Core;
+using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Core.Services;
+using Umbraco.Web;
 using Umbraco.Web.Editors;
 using Umbraco.Web.Mvc;
 using Constants = Our.Umbraco.MeganavV8.Core.Constants;
@@ -13,8 +17,18 @@ namespace Our.Umbraco.MeganavV8.Api.Controllers.API
     [PluginController(Constants.PackageName)]
     public class MeganavV8EntityApiController : UmbracoAuthorizedJsonController
     {
-        public HttpResponseMessage GetById(string id)
+        private readonly IVariationContextAccessor _variationContextAccessor;
+
+        public MeganavV8EntityApiController(IVariationContextAccessor variationContextAccessor)
         {
+            _variationContextAccessor = variationContextAccessor;
+        }
+        public HttpResponseMessage GetById(string id, string url, string culture = null)
+        {
+            if (!string.IsNullOrEmpty(culture))
+            {
+                _variationContextAccessor.VariationContext = new VariationContext(culture);
+            }
             var udiList = new List<Udi>();
             var udi = Udi.Parse(id);
             udiList.Add(udi);
@@ -23,6 +37,7 @@ namespace Our.Umbraco.MeganavV8.Api.Controllers.API
             if (entity != null)
             {
                 string entityUrl = "#";
+                string entityCulture = null;
 
                 if (entity.Published)
                 {
@@ -31,6 +46,7 @@ namespace Our.Umbraco.MeganavV8.Api.Controllers.API
                     if (publishedEntity != null)
                     {
                         entityUrl = publishedEntity.Url;
+                        cculture
                     }
                 }
 
@@ -42,7 +58,8 @@ namespace Our.Umbraco.MeganavV8.Api.Controllers.API
                     icon = entity.ContentType.Icon,
                     url = entityUrl,
                     published = entity.Published,
-                    naviHide = entity.HasProperty("umbracoNaviHide") && entity.GetValue<bool>("umbracoNaviHide")
+                    naviHide = entity.HasProperty("umbracoNaviHide") && entity.GetValue<bool>("umbracoNaviHide"),
+                    culture = cculture
                 });
             }
 

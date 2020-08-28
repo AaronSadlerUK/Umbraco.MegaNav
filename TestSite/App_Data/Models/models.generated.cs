@@ -17,8 +17,8 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "c4de1de1cea5bfb3")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "aeb9685254c299f3")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.6")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -285,6 +285,20 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Content Picker
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]
+		[ImplementPropertyType("contentPicker")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent ContentPicker => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("contentPicker");
+
+		///<summary>
+		/// Multi Url Picker
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]
+		[ImplementPropertyType("multiUrlPicker")]
+		public global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.Models.Link> MultiUrlPicker => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Web.Models.Link>>("multiUrlPicker");
 
 		///<summary>
 		/// Content

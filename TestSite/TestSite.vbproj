@@ -318,6 +318,7 @@
     <Content Include="App_Plugins\MeganavV8\Css\editor.css" />
     <Content Include="App_Plugins\MeganavV8\Js\angular-ui-tree.js" />
     <Content Include="App_Plugins\MeganavV8\Js\meganavv8.controller.js" />
+    <Content Include="App_Plugins\MeganavV8\Js\meganavv8.linkpicker.controller.js" />
     <Content Include="App_Plugins\MeganavV8\Js\meganavv8.resource.js" />
     <Content Include="App_Plugins\MeganavV8\Views\editor.html" />
     <Content Include="App_Plugins\MeganavV8\Views\settings.html" />
