@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Net;
@@ -17,18 +17,8 @@ namespace Our.Umbraco.MeganavV8.Api.Controllers.API
     [PluginController(Constants.PackageName)]
     public class MeganavV8EntityApiController : UmbracoAuthorizedJsonController
     {
-        private readonly IVariationContextAccessor _variationContextAccessor;
-
-        public MeganavV8EntityApiController(IVariationContextAccessor variationContextAccessor)
+        public HttpResponseMessage GetById(string id, string culture = null)
         {
-            _variationContextAccessor = variationContextAccessor;
-        }
-        public HttpResponseMessage GetById(string id, string url, string culture = null)
-        {
-            if (!string.IsNullOrEmpty(culture))
-            {
-                _variationContextAccessor.VariationContext = new VariationContext(culture);
-            }
             var udiList = new List<Udi>();
             var udi = Udi.Parse(id);
             udiList.Add(udi);
@@ -36,8 +26,8 @@ namespace Our.Umbraco.MeganavV8.Api.Controllers.API
 
             if (entity != null)
             {
+                string entityName = entity.Name;
                 string entityUrl = "#";
-                string entityCulture = null;
 
                 if (entity.Published)
                 {
@@ -45,8 +35,8 @@ namespace Our.Umbraco.MeganavV8.Api.Controllers.API
 
                     if (publishedEntity != null)
                     {
-                        entityUrl = publishedEntity.Url;
-                        cculture
+                        entityName = publishedEntity.Name(culture);
+                        entityUrl = publishedEntity.Url(culture);
                     }
                 }
 
@@ -54,7 +44,7 @@ namespace Our.Umbraco.MeganavV8.Api.Controllers.API
                 {
                     id = entity.Id,
                     udi = entity.GetUdi(),
-                    name = entity.Name,
+                    name = entityName,
                     icon = entity.ContentType.Icon,
                     url = entityUrl,
                     published = entity.Published,
