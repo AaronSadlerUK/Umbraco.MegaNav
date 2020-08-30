@@ -18,7 +18,7 @@
     <AssemblyName>TestSite</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MyType>Custom</MyType>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -318,7 +318,6 @@
     <Content Include="App_Plugins\MeganavV8\Css\editor.css" />
     <Content Include="App_Plugins\MeganavV8\Js\angular-ui-tree.js" />
     <Content Include="App_Plugins\MeganavV8\Js\meganavv8.controller.js" />
-    <Content Include="App_Plugins\MeganavV8\Js\meganavv8.linkpicker.controller.js" />
     <Content Include="App_Plugins\MeganavV8\Js\meganavv8.resource.js" />
     <Content Include="App_Plugins\MeganavV8\Views\editor.html" />
     <Content Include="App_Plugins\MeganavV8\Views\settings.html" />
@@ -478,7 +477,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>53457</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:53457/</IISUrl>
+          <IISUrl>http://meganavv8.mypc</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
