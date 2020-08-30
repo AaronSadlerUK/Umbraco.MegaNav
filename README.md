@@ -2,12 +2,6 @@
 
 # Umbraco MeganavV8
 
-A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco 8.
-
-This based on [MegaNav V2.0.0](https://github.com/callumbwhyte/meganav/releases/tag/v2.0.0) by [Callum Whyte](https://our.umbraco.com/members/id:152036/), I have changed it to use UDI instead of ID and it now supports querystrings / anchor urls.
-
-All credit for the initial plugin goes to [Callum Whyte](https://our.umbraco.com/members/id:152036/).
-
 ## Getting started
 
 This package is supported on Umbraco 8.4+.
@@ -27,7 +21,7 @@ To [install Core from NuGet](https://www.nuget.org/packages/AaronSadler.MegaNavV
 
 ## Usage
 
-After installing the package, you will have a new property editor called MegaNav in the Umbraco backoffice.
+After installing the package, you will have a new property editor called MegaNavV8 in the Umbraco backoffice.
 
 Here you can configure the "Max depth" of the navigation - the maximum number of levels deep at which an editor can place nav items. You also have the option to prevent nav items where the _umbracoNaviHide_ property has been set from rendering on the front-end - these items will still appear in the backoffice but not on your website, you can still edit or change them as you wish. By default both of these settings are left unset.
 
@@ -62,11 +56,7 @@ To raise a new bug, create an issue on the GitHub repository. To fix a bug or ad
 ### Who do I talk to?
 This project is maintained by [Aaron Sadler](https://aaronsadler.uk) and contributors. If you have any questions about the project please contact me through [Twitter](https://twitter.com/AaronSadlerUK), or by raising an issue on GitHub.
 
-## Credits
-
-Meganav uses a _slightly_ modified version of [Angular UI Tree](https://github.com/angular-ui-tree/angular-ui-tree) v2.11.0 (MIT license)
-
-### A special #h5yr to our contributors
+### A special #h5yr to the orignal author
 
 * [Callum Whyte](https://github.com/callumbwhyte)
 
