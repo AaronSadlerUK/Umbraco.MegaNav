@@ -1,4 +1,4 @@
-﻿function MeganavV8($scope, editorService, meganavV8Resource) {
+﻿function MeganavV8($scope, editorService, meganavV8Resource, $routeParams) {
 
     $scope.items = [];
 
@@ -53,7 +53,7 @@
     function getItemEntities(items) {
         _.each(items, function (item) {
             if (item.udi) {
-                meganavV8Resource.getById(item.udi, null, item.culture)
+                meganavV8Resource.getById(item.udi, $routeParams.cculture ? $routeParams.cculture : $routeParams.mculture)
                     .then(function (response) {
                         angular.extend(item, response.data);
                     }
@@ -78,7 +78,7 @@
                     model.target.anchor = (model.target.anchor.indexOf('=') === -1 ? '#' : '?') + model.target.anchor;
                 }
                 if (model.target.udi) {
-                    meganavV8Resource.getById(model.target.udi, model.target.url, null)
+                    meganavV8Resource.getById(model.target.udi, { cultureName: $routeParams.cculture ? $routeParams.cculture : $routeParams.mculture })
                         .then(function (response) {
                             // merge metadata
                             angular.extend(model.target, response.data);
@@ -121,7 +121,8 @@
             children: data.children || [],
             icon: data.icon || "icon-link",
             published: data.published,
-            naviHide: data.naviHide
+            naviHide: data.naviHide,
+            culture: data.culture
         }
     }
 }
