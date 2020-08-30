@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Net;
@@ -49,7 +49,7 @@ namespace Our.Umbraco.MeganavV8.Api.Controllers.API
                     url = entityUrl,
                     published = entity.Published,
                     naviHide = entity.HasProperty("umbracoNaviHide") && entity.GetValue<bool>("umbracoNaviHide"),
-                    culture = cculture
+                    culture = culture
                 });
             }
 
