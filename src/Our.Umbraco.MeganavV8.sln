@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.Umbraco.MeganavV8.Core"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.MeganavV8.Api", "Our.Umbraco.MeganavV8.Api\Our.Umbraco.MeganavV8.Api.csproj", "{577F0FB6-FDE2-437C-99FB-96CC8AE26EF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSite2", "TestSite2\TestSite2.csproj", "{2A746C2F-8CCA-41D2-90D3-CFA5F7DC8063}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,12 @@ Global
 		{577F0FB6-FDE2-437C-99FB-96CC8AE26EF0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{577F0FB6-FDE2-437C-99FB-96CC8AE26EF0}.Staging|Any CPU.ActiveCfg = Release|Any CPU
 		{577F0FB6-FDE2-437C-99FB-96CC8AE26EF0}.Staging|Any CPU.Build.0 = Release|Any CPU
+		{2A746C2F-8CCA-41D2-90D3-CFA5F7DC8063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A746C2F-8CCA-41D2-90D3-CFA5F7DC8063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A746C2F-8CCA-41D2-90D3-CFA5F7DC8063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A746C2F-8CCA-41D2-90D3-CFA5F7DC8063}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A746C2F-8CCA-41D2-90D3-CFA5F7DC8063}.Staging|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A746C2F-8CCA-41D2-90D3-CFA5F7DC8063}.Staging|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
