@@ -1,18 +1,15 @@
 ﻿using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Threading;
 using Umbraco.Core;
-using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Core.Services;
 using Umbraco.Web;
 using Umbraco.Web.Editors;
 using Umbraco.Web.Mvc;
 using Constants = Our.Umbraco.MeganavV8.Core.Constants;
 
-namespace Our.Umbraco.MeganavV8.Api.Controllers.API
+namespace AaronSadler.MegaNavV8.Api.Controllers.API
 {
     [PluginController(Constants.PackageName)]
     public class MeganavV8EntityApiController : UmbracoAuthorizedJsonController

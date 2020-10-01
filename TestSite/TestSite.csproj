@@ -457,16 +457,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\Our.Umbraco.MeganavV8.Api\AaronSadler.MegaNavV8.Api.csproj">
+    <ProjectReference Include="..\src\AaronSadler.MegaNavV8.Api\AaronSadler.MegaNavV8.Api.csproj">
       <Project>{577f0fb6-fde2-437c-99fb-96cc8ae26ef0}</Project>
       <Name>AaronSadler.MegaNavV8.Api</Name>
     </ProjectReference>
-    <ProjectReference Include="..\src\Our.Umbraco.MeganavV8.Core\AaronSadler.MegaNavV8.Core.csproj">
-      <Project>{0729472f-155f-4a11-b30d-67d77eb225f3}</Project>
+    <ProjectReference Include="..\src\AaronSadler.MegaNavV8.Core\AaronSadler.MegaNavV8.Core.csproj">
+      <Project>{da07b41d-3df6-48ff-833d-10e284f4248b}</Project>
       <Name>AaronSadler.MegaNavV8.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -7,8 +7,8 @@
     <ProjectGuid>{577F0FB6-FDE2-437C-99FB-96CC8AE26EF0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Our.Umbraco.MeganavV8.Api</RootNamespace>
-    <AssemblyName>Our.Umbraco.MeganavV8.Api</AssemblyName>
+    <RootNamespace>AaronSadler.MegaNavV8.Api</RootNamespace>
+    <AssemblyName>AaronSadler.MegaNavV8.Api</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -253,14 +253,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Our.Umbraco.MeganavV8.Core\Our.Umbraco.MeganavV8.Core.csproj">
-      <Project>{0729472f-155f-4a11-b30d-67d77eb225f3}</Project>
-      <Name>Our.Umbraco.MeganavV8.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AaronSadler.MegaNavV8.Core\AaronSadler.MegaNavV8.Core.csproj">
+      <Project>{da07b41d-3df6-48ff-833d-10e284f4248b}</Project>
+      <Name>AaronSadler.MegaNavV8.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Umbraco.SqlServerCE.4.0.0.1\build\Umbraco.SqlServerCE.targets" Condition="Exists('..\packages\Umbraco.SqlServerCE.4.0.0.1\build\Umbraco.SqlServerCE.targets')" />
