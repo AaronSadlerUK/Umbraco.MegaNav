@@ -19,10 +19,11 @@ The following properties are available in the _MeganavItem_ class:
 | Level             | Int               | The level in the overall navigation that the current item sits at |
 | Content           | IPublishedContent | The IPublishedContent for the selected content item. For external linking nav items this will be null |
 | Children          | List              | The picked child / sub items for the current item |
+| Culture           | String            | The link culture
 
 ## Implementing Razor
 
-Meganav was designed to closely follow the "Umbraco way" of doing things so we don't impose our own styles or markup on you.
+MeganavV8 was designed to closely follow the "Umbraco way" of doing things so we don't impose our own styles or markup on you.
 
 It's easy to implement in your own Razor:
 
@@ -41,7 +42,7 @@ It's easy to implement in your own Razor:
 
 ## Complex navigation
 
-Meganav can build any size of navigation, from a small single level list to a large multi-level menu.
+MeganavV8 can build any size of navigation, from a small single level list to a large multi-level menu.
 
 Based on the flexible implementation described above it would be possible to create a complex navigation varying on a number of factors, such as:
 

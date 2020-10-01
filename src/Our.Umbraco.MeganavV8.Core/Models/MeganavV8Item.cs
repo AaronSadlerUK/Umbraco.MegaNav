@@ -32,6 +32,7 @@ namespace Our.Umbraco.MeganavV8.Core.Models
         public bool Collapsed { get; set; }
 
         public GuidUdi Udi { get; set; }
+        public string Culture { get; set; }
 
         #endregion
     }

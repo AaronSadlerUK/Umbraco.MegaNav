@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using Our.Umbraco.MeganavV8.Core.Enums;
 using Our.Umbraco.MeganavV8.Core.Models;
 using Our.Umbraco.MeganavV8.Core.PropertyEditors;
+using Umbraco.Core;
 using Umbraco.Core.Logging;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Core.PropertyEditors;
@@ -91,11 +92,11 @@ namespace Our.Umbraco.MeganavV8.Core.ValueConverters
                         // set title to node name if no override is set
                         if (string.IsNullOrWhiteSpace(item.Title))
                         {
-                            item.Title = umbracoContent.Name;
+                            item.Title = umbracoContent.Name(item.Culture);
                         }
 
                         // set url to most recent from published cache
-                        item.Url = umbracoContent.Url;
+                        item.Url = umbracoContent.Url(item.Culture);
                     }
                 }
 
