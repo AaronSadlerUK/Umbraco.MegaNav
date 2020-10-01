@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestSite", "..\TestSite\TestSite.vbproj", "{F1497D32-E190-4499-AC7E-5D2E18735916}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.MeganavV8.Web", "Our.Umbraco.MeganavV8.Web\Our.Umbraco.MeganavV8.Web.csproj", "{CD05D171-8C1B-45FC-B177-0AB992F2518B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Our.Umbraco.MeganavV8.Core", "Our.Umbraco.MeganavV8.Core\Our.Umbraco.MeganavV8.Core.csproj", "{0729472F-155F-4A11-B30D-67D77EB225F3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.MeganavV8.Api", "Our.Umbraco.MeganavV8.Api\Our.Umbraco.MeganavV8.Api.csproj", "{577F0FB6-FDE2-437C-99FB-96CC8AE26EF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSite", "..\TestSite\TestSite.csproj", "{2A746C2F-8CCA-41D2-90D3-CFA5F7DC8063}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,12 +18,6 @@ Global
 		Staging|Any CPU = Staging|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F1497D32-E190-4499-AC7E-5D2E18735916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F1497D32-E190-4499-AC7E-5D2E18735916}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F1497D32-E190-4499-AC7E-5D2E18735916}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F1497D32-E190-4499-AC7E-5D2E18735916}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F1497D32-E190-4499-AC7E-5D2E18735916}.Staging|Any CPU.ActiveCfg = Release|Any CPU
-		{F1497D32-E190-4499-AC7E-5D2E18735916}.Staging|Any CPU.Build.0 = Release|Any CPU
 		{CD05D171-8C1B-45FC-B177-0AB992F2518B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CD05D171-8C1B-45FC-B177-0AB992F2518B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD05D171-8C1B-45FC-B177-0AB992F2518B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,6 +36,12 @@ Global
 		{577F0FB6-FDE2-437C-99FB-96CC8AE26EF0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{577F0FB6-FDE2-437C-99FB-96CC8AE26EF0}.Staging|Any CPU.ActiveCfg = Release|Any CPU
 		{577F0FB6-FDE2-437C-99FB-96CC8AE26EF0}.Staging|Any CPU.Build.0 = Release|Any CPU
+		{2A746C2F-8CCA-41D2-90D3-CFA5F7DC8063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A746C2F-8CCA-41D2-90D3-CFA5F7DC8063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A746C2F-8CCA-41D2-90D3-CFA5F7DC8063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A746C2F-8CCA-41D2-90D3-CFA5F7DC8063}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A746C2F-8CCA-41D2-90D3-CFA5F7DC8063}.Staging|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A746C2F-8CCA-41D2-90D3-CFA5F7DC8063}.Staging|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

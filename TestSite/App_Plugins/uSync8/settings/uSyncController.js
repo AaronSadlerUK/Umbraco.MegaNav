@@ -109,8 +109,18 @@
             uSync8DashboardService.checkVersion()
                 .then(function (result) {
                     vm.versionInfo = result.data;
-                })
+                });
+
+            uSync8DashboardService.getAddOns()
+                .then(function (result) {
+                    vm.version = 'v' + result.data.Version;
+                    if (result.data.AddOnString.length > 0) {
+                        vm.version += ' + ' + result.data.AddOnString;
+                    }
+                });
         }
+
+
 
         ///////////
         function report(group) {
@@ -158,7 +168,7 @@
 
         function importItems(force, group) {
             resetStatus(modes.IMPORT);
-            vm.hideLink = true;
+            vm.hideLink = false;
             vm.importButton.state = 'busy';
 
             uSync8DashboardService.importItems(force, group, getClientId())
@@ -220,9 +230,8 @@
                             },
                             labelKey: 'usync_report-' + group.toLowerCase()
                         });
-
-                        vm.loading = false;
                     });
+                    vm.loading = false;
                 }, function (error) {
                     vm.loading = false;
                 });

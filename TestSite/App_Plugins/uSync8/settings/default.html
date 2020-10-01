@@ -1,5 +1,6 @@
 ﻿<div ng-controller="uSync8Controller as vm">
 
+
     <div ng-if="vm.versionInfo.IsCurrent != true" class="alert alert-info usync-alert">
         <localize key="usync_newer"></localize> [v{{vm.versionInfo.VersionInfo.Core}}]
         <span ng-if="vm.versionInfo.VersionInfo.Message">
@@ -10,6 +11,10 @@
     </div>
 
     <umb-box ng-if="!vm.loading">
+        <div ng-if="vm.versionInfo.HandlersLoaded != undefined && vm.versionInfo.HandlersLoaded != true" class="alert alert-danger usync-alert">
+            <localize key="usync_noHandlers"></localize>
+        </div>
+
         <umb-box-content>
             <div class="flex justify-between items-center">
                 <div class="usync-main-buttons">
@@ -43,6 +48,7 @@
                 </div>
 
                 <div>
+                    <div ng-if="!vm.savings.show" class="muted"><em>{{vm.version}}</em></div>
                     <div ng-if="vm.savings.show">
                         {{vm.savings.title}}  {{vm.savings.message}}
                     </div>
