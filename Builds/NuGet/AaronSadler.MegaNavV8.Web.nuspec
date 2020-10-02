@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AaronSadler.MegaNavV8.Web</id>
-    <version>8.1.0</version>
+    <version>8.1.1</version>
     <title>Umbraco.MegaNavV8.Web</title>
     <authors>Aaron Sadler, Callum Whyte</authors>
     <owners>Aaron Sadler, Callum Whyte</owners>
@@ -16,8 +16,8 @@
     <copyright>Copyright 2020</copyright>
     <tags>umbraco, umbraco-cms, MegaNav, MegaNav-V8</tags>
 	<dependencies>
-	  <dependency id="AaronSadler.MegaNavV8.Core" version="8.1.0" />
-	  <dependency id="AaronSadler.MegaNavV8.Api" version="8.1.0" />
+	  <dependency id="AaronSadler.MegaNavV8.Core" version="8.1.1" />
+	  <dependency id="AaronSadler.MegaNavV8.Api" version="8.1.1" />
     </dependencies>
   </metadata>
       <files>
