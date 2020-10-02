@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [8.1.0]
+### Breaking Changes
+* Updated namespaces to align with current project name
+* Updated the project alias to align with the current project name
+
 ## [8.0.15] - 2020-08-30
 ### Added
 * Added language variant support
