@@ -1,6 +1,16 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [8.1.0] - 2020-10-02
+### Breaking Changes
+* Updated namespaces to align with current project name
+* Updated the project alias to align with the current project name
+
+```diff
++ Once this version is installed, you will need to edit the document type, and re-select the property editor.
++ Do not delete the property, just edit and then re-select MegaNavV8 from the property editor selection window.
+```
+
 ## [8.0.15] - 2020-08-30
 ### Added
 * Added language variant support
