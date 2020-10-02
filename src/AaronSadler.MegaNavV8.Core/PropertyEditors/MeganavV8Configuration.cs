@@ -1,6 +1,6 @@
 ﻿using Umbraco.Core.PropertyEditors;
 
-namespace Our.Umbraco.MeganavV8.Core.PropertyEditors
+namespace AaronSadler.MegaNavV8.Core.PropertyEditors
 {
     public class MeganavV8Configuration
     {

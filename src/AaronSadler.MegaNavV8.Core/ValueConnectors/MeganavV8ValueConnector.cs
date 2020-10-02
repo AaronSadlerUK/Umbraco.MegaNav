@@ -5,7 +5,7 @@ using Umbraco.Core;
 using Umbraco.Core.Deploy;
 using Umbraco.Core.Models;
 
-namespace Our.Umbraco.MeganavV8.Core.ValueConnectors
+namespace AaronSadler.MegaNavV8.Core.ValueConnectors
 {
     /// <summary>
     /// Represents a value connector for the Our.Umbraco.MeganavV8 property editor

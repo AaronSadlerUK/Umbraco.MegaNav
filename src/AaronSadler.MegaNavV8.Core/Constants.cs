@@ -1,4 +1,4 @@
-﻿namespace Our.Umbraco.MeganavV8.Core
+namespace AaronSadler.MegaNavV8.Core
 {
     public class Constants
     {

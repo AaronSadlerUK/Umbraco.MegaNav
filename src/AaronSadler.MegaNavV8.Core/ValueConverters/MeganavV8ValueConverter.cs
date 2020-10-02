@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using AaronSadler.MegaNavV8.Core.Enums;
+using AaronSadler.MegaNavV8.Core.Models;
+using AaronSadler.MegaNavV8.Core.PropertyEditors;
 using Newtonsoft.Json;
-using Our.Umbraco.MeganavV8.Core.Enums;
-using Our.Umbraco.MeganavV8.Core.Models;
-using Our.Umbraco.MeganavV8.Core.PropertyEditors;
 using Umbraco.Core;
 using Umbraco.Core.Logging;
 using Umbraco.Core.Models.PublishedContent;
@@ -12,7 +12,7 @@ using Umbraco.Core.PropertyEditors;
 using Umbraco.Web;
 using Umbraco.Web.PublishedCache;
 
-namespace Our.Umbraco.MeganavV8.Core.ValueConverters
+namespace AaronSadler.MegaNavV8.Core.ValueConverters
 {
     public class MeganavV8ValueConverter : PropertyValueConverterBase
     {

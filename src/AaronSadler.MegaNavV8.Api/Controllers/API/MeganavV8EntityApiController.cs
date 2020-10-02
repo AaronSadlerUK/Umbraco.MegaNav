@@ -7,7 +7,7 @@ using Umbraco.Core.Services;
 using Umbraco.Web;
 using Umbraco.Web.Editors;
 using Umbraco.Web.Mvc;
-using Constants = Our.Umbraco.MeganavV8.Core.Constants;
+using Constants = AaronSadler.MegaNavV8.Core.Constants;
 
 namespace AaronSadler.MegaNavV8.Api.Controllers.API
 {
