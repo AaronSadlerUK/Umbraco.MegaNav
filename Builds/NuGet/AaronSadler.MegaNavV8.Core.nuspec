@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package >
   <metadata>
-    <id>AaronSadler.MegaNavV8.Web</id>
-    <version>8.0.15</version>
-    <title>Umbraco.MegaNavV8.Web</title>
+    <id>AaronSadler.MegaNavV8.Core</id>
+    <version>8.1.0</version>
+    <title>MegaNavV8 Core</title>
     <authors>Aaron Sadler, Callum Whyte</authors>
     <owners>Aaron Sadler, Callum Whyte</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -12,16 +12,18 @@
     <icon>MegaNavV8-Logo.png</icon>
     <summary>A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco</summary>
     <description>A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco</description>
-    <releaseNotes><![CDATA[Added culture variant support]]></releaseNotes>
+    <releaseNotes><![CDATA[Breaking Changes: Updated namespaces to align with current project name, Updated the project alias to align with the current project name]]></releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>umbraco, umbraco-cms, MegaNav, MegaNav-V8</tags>
 	<dependencies>
-	  <dependency id="AaronSadler.MegaNavV8.Core" version="8.0.12" />
-	  <dependency id="AaronSadler.MegaNavV8.Api" version="8.0.12" />
+	  <group targetFramework=".NETFramework4.7.2">
+		  <dependency id="UmbracoCms.Web" version="8.4.0" />
+		  <dependency id="UmbracoCms.Core" version="8.4.0" />
+	  </group>
     </dependencies>
   </metadata>
       <files>
-	  <file src="..\..\src\Our.Umbraco.MeganavV8.Web\Web\UI\App_Plugins\MeganavV8\**\*.*" target="content\App_Plugins\MeganavV8\" /> 
+	  <file src="..\..\src\AaronSadler.MegaNavV8.Core\bin\Release\net472\Our.Umbraco.MeganavV8.Core.dll" target="lib\net472" />
       <file src="..\MegaNavV8-Logo.png"/>
     </files>
 </package>

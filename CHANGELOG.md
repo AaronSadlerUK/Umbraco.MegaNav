@@ -1,7 +1,7 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## [8.1.0]
+## [8.1.0] - 2020-10-02
 ### Breaking Changes
 * Updated namespaces to align with current project name
 * Updated the project alias to align with the current project name
