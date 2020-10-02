@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AaronSadler.MegaNavV8.Core</id>
-    <version>8.1.0</version>
+    <version>8.1.1</version>
     <title>MegaNavV8 Core</title>
     <authors>Aaron Sadler, Callum Whyte</authors>
     <owners>Aaron Sadler, Callum Whyte</owners>
@@ -23,7 +23,7 @@
     </dependencies>
   </metadata>
       <files>
-	  <file src="..\..\src\AaronSadler.MegaNavV8.Core\bin\Release\net472\Our.Umbraco.MeganavV8.Core.dll" target="lib\net472" />
+	  <file src="..\..\src\AaronSadler.MegaNavV8.Core\bin\Release\net472\AaronSadler.MegaNavV8.Core.dll" target="lib\net472" />
       <file src="..\MegaNavV8-Logo.png"/>
     </files>
 </package>

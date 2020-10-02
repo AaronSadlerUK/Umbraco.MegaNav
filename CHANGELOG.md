@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [8.1.1] - 2020-10-02
+### Fixed
+Included correct DLLs
+
 ## [8.1.0] - 2020-10-02
 ### Breaking Changes
 * Updated namespaces to align with current project name
