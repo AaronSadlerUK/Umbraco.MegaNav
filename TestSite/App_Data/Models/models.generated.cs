@@ -17,7 +17,7 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "61b4820a86148dc8")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "9ec2f3ef2635ef78")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedModels
@@ -981,7 +981,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.7.0")]
 		[ImplementPropertyType("megaNavV8")]
-		public global::System.Collections.Generic.IEnumerable<global::Our.Umbraco.MeganavV8.Core.Models.MeganavV8Item> MegaNavV8 => this.Value<global::System.Collections.Generic.IEnumerable<global::Our.Umbraco.MeganavV8.Core.Models.MeganavV8Item>>("megaNavV8");
+		public global::System.Collections.Generic.IEnumerable<global::AaronSadler.MegaNavV8.Core.Models.MeganavV8Item> MegaNavV8 => this.Value<global::System.Collections.Generic.IEnumerable<global::AaronSadler.MegaNavV8.Core.Models.MeganavV8Item>>("megaNavV8");
 	}
 
 	/// <summary>Folder</summary>
