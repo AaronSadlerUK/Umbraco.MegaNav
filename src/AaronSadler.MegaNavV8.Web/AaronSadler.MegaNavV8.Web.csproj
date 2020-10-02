@@ -7,8 +7,8 @@
     <ProjectGuid>{CD05D171-8C1B-45FC-B177-0AB992F2518B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Our.Umbraco.MeganavV8.Web</RootNamespace>
-    <AssemblyName>Our.Umbraco.MeganavV8.Web</AssemblyName>
+    <RootNamespace>AaronSadler.MegaNavV8.Web</RootNamespace>
+    <AssemblyName>AaronSadler.MegaNavV8.Web</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
