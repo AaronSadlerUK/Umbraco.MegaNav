@@ -78,7 +78,7 @@
                     model.target.anchor = (model.target.anchor.indexOf('=') === -1 ? '#' : '?') + model.target.anchor;
                 }
                 if (model.target.udi) {
-                    meganavV8Resource.getById(model.target.udi, { cultureName: $routeParams.cculture ? $routeParams.cculture : $routeParams.mculture })
+                    meganavV8Resource.getById(model.target.udi, $routeParams.cculture ? $routeParams.cculture : $routeParams.mculture)
                         .then(function (response) {
                             // merge metadata
                             angular.extend(model.target, response.data);
