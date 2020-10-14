@@ -1,7 +1,7 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## [8.1.2] - 2020-10-02
+## [8.1.2] - 2020-10-14
 ### Fixed
 Fixed issue where a new mega nav requires as string, but an object is passed. - Pull Request #13, Thanks auroris!
 
