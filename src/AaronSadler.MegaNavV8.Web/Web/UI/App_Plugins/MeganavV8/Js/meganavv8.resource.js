@@ -2,7 +2,7 @@
     return {
         getById: function (id, culture) {
 
-            return $http.get("backoffice/MeganavV8/MeganavV8EntityApi/GetById?id=" + id + "&culture=" + culture)
+            return $http.get("backoffice/MeganavV8/MeganavV8EntityApi/GetById?id=" + id + "&culture=" + culture.cultureName)
                 .then(function (response) {
                     var item = response.data;
                     item.icon = iconHelper.convertFromLegacyIcon(item.icon);
