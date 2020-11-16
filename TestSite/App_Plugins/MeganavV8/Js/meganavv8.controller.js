@@ -38,6 +38,15 @@
         _.each($scope.items, function (c) { c.collapsed = false });
     };
 
+    $scope.showButtons = function () {
+        const maxDepth = $scope.model.config.maxDepth;
+        if (maxDepth === 0 || maxDepth > 1) {
+            return true;
+        }
+
+        return false;
+    };
+
     $scope.remove = function (item) {
         item.remove();
     };
@@ -57,7 +66,7 @@
                     .then(function (response) {
                         angular.extend(item, response.data);
                     }
-                );
+                    );
 
                 if (item.children.length > 0) {
                     getItemEntities(item.children);
@@ -85,7 +94,7 @@
 
                             callback(model.target);
                         }
-                    );
+                        );
                 }
                 else {
                     callback(model.target);
