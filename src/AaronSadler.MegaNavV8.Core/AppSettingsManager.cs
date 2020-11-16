@@ -10,5 +10,11 @@ namespace AaronSadler.MegaNavV8.Core
             return ConfigurationManager.AppSettings["DisableUmbracoCloudSync"] != null 
                    && Convert.ToBoolean(ConfigurationManager.AppSettings["DisableUmbracoCloudSync"]);
         }
+
+        public static bool GetDisableUmbracoCloudDependencySync()
+        {
+            return ConfigurationManager.AppSettings["DisableUmbracoCloudDependencySync"] != null
+                   && Convert.ToBoolean(ConfigurationManager.AppSettings["DisableUmbracoCloudDependencySync"]);
+        }
     }
 }

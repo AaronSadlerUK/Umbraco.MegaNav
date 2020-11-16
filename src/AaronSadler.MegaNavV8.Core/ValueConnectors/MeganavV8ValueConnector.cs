@@ -45,10 +45,13 @@ namespace AaronSadler.MegaNavV8.Core.ValueConnectors
         {
             foreach (var link in links)
             {
-                var validUdi = GuidUdi.TryParse(link.Value<string>("udi"), out var guidUdi);
-                if (validUdi)
+                if (!AppSettingsManager.GetDisableUmbracoCloudDependencySync())
                 {
-                    dependencies.Add(new ArtifactDependency(guidUdi, false, ArtifactDependencyMode.Exist));
+                    var validUdi = GuidUdi.TryParse(link.Value<string>("udi"), out var guidUdi);
+                    if (validUdi)
+                    {
+                        dependencies.Add(new ArtifactDependency(guidUdi, false, ArtifactDependencyMode.Exist));
+                    }
                 }
 
                 var children = link.Value<JArray>("children");
