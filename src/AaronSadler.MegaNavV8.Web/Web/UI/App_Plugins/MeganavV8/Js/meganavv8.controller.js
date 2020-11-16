@@ -31,12 +31,26 @@
     };
 
     $scope.collapseAll = function () {
-        _.each($scope.items, function (c) { c.collapsed = true });
+        $scope.items.forEach(toggleChildrenTrue);
     };
 
     $scope.expandAll = function () {
-        _.each($scope.items, function (c) { c.collapsed = false });
+        $scope.items.forEach(toggleChildrenFalse);
     };
+
+    function toggleChildrenTrue(item) {
+        item.collapsed = true;
+        if (item.children) {
+            item.children.forEach(toggleChildrenTrue);
+        }
+    }
+
+    function toggleChildrenFalse(item) {
+        item.collapsed = false;
+        if (item.children) {
+            item.children.forEach(toggleChildrenFalse);
+        }
+    }
 
     $scope.showButtons = function () {
         const maxDepth = $scope.model.config.maxDepth;
