@@ -12,7 +12,7 @@
             handleClass: 'angular-ui-tree-handle',
             placeholderClass: 'angular-ui-tree-placeholder',
             dragClass: 'angular-ui-tree-drag',
-            dragThreshold: 3,
+            dragThreshold: 20,
             defaultCollapsed: false,
             appendChildOnHover: true
         });
@@ -1026,10 +1026,16 @@
                                     // example 1.1.1 becomes 1.2
                                     if (pos.distX > 0) {
                                         prev = dragInfo.prev();
-                                        if (prev && !prev.collapsed
-                                            && prev.accept(scope, prev.childNodesCount())) {
-                                            prev.$childNodesScope.$element.append(placeElm);
-                                            dragInfo.moveTo(prev.$childNodesScope, prev.childNodes(), prev.childNodesCount());
+                                        if (prev && !prev.collapsed && prev.accept(scope, prev.childNodesCount())) {
+                                            if (!dragInfo.deltaDistX || dragInfo.deltaDistX < 0) {
+                                                dragInfo.deltaDistX = 0;
+                                            }
+                                            dragInfo.deltaDistX += pos.distX;
+                                            if (dragInfo.deltaDistX > config.dragThreshold) {
+                                                prev.$childNodesScope.$element.append(placeElm);
+                                                dragInfo.moveTo(prev.$childNodesScope, prev.childNodes(), prev.childNodesCount());
+                                                dragInfo.deltaDistX = 0;
+                                            }
                                         }
                                     }
 
@@ -1040,10 +1046,16 @@
                                         next = dragInfo.next();
                                         if (!next) {
                                             target = dragInfo.parentNode(); // As a sibling of it's parent node
-                                            if (target
-                                                && target.$parentNodesScope.accept(scope, target.index() + 1)) {
-                                                target.$element.after(placeElm);
-                                                dragInfo.moveTo(target.$parentNodesScope, target.siblings(), target.index() + 1);
+                                            if (target && target.$parentNodesScope.accept(scope, target.index() + 1)) {
+                                                if (!dragInfo.deltaDistX || dragInfo.deltaDistX > 0) {
+                                                    dragInfo.deltaDistX = 0;
+                                                }
+                                                dragInfo.deltaDistX += pos.distX;
+                                                if (dragInfo.deltaDistX < -config.dragThreshold) {
+                                                    target.$element.after(placeElm);
+                                                    dragInfo.moveTo(target.$parentNodesScope, target.siblings(), target.index() + 1);
+                                                    dragInfo.deltaDistX = 0;
+                                                }
                                             }
                                         }
                                     }
