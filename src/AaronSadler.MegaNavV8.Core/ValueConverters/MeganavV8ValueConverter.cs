@@ -50,7 +50,7 @@ namespace AaronSadler.MegaNavV8.Core.ValueConverters
 
             try
             {
-                var items = JsonConvert.DeserializeObject<IEnumerable<MeganavV8Item>>(inter.ToString());
+                var items = JsonConvert.DeserializeObject<IEnumerable<MegaNavV8InternalItem>>(inter.ToString());
 
                 return BuildMenu(items);
             }
