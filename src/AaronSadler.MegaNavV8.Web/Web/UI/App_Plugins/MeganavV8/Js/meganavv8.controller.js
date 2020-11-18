@@ -52,6 +52,7 @@
 
     function getItemEntities(items) {
         _.each(items, function (item) {
+            item.description = item.url;
             if (item.udi) {
                 meganavV8Resource.getById(item.udi, $routeParams.cculture ? $routeParams.cculture : $routeParams.mculture)
                     .then(function (response) {
