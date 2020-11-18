@@ -1,6 +1,8 @@
 ﻿using System;
 using AaronSadler.MegaNavV8.Core.Models;
+using Umbraco.Core;
 using Umbraco.Core.Models.PublishedContent;
+using Umbraco.Web.Composing;
 
 namespace AaronSadler.MegaNavV8.Core.Extensions
 {
@@ -16,25 +18,42 @@ namespace AaronSadler.MegaNavV8.Core.Extensions
                 throw new InvalidOperationException(
                     "Cannot resolve a Url when Current.UmbracoContext.UrlProvider is null.");
 
-            var contentItem = umbracoContext.Content.GetById(item.Udi);
 
-            if (contentItem != null)
+            if (item.Udi != null)
             {
-                switch (contentItem.ContentType.ItemType)
+                var contentItem = GuidUdi.TryParse(item.Udi.ToString(), out var udi) 
+                    ? Current.UmbracoContext.Content.GetById(item.Udi) 
+                    : Current.UmbracoContext.Content.GetById(item.Id);
+
+                if (contentItem != null)
                 {
-                    case PublishedItemType.Content:
-                        return umbracoContext.UrlProvider.GetUrl(contentItem, mode, culture);
+                    switch (contentItem.ContentType.ItemType)
+                    {
+                        case PublishedItemType.Content:
 
-                    case PublishedItemType.Media:
-                        return umbracoContext.UrlProvider.GetMediaUrl(contentItem, mode, culture,
-                            Umbraco.Core.Constants.Conventions.Media.File);
+                            string url;
+                            if (!string.IsNullOrEmpty(item.Anchor))
+                            {
+                                url = umbracoContext.UrlProvider.GetUrl(contentItem, mode, culture) + item.Anchor;
+                            }
+                            else
+                            {
+                                url = umbracoContext.UrlProvider.GetUrl(contentItem, mode, culture);
+                            }
 
-                    default:
-                        throw new NotSupportedException();
+                            return url;
+
+                        case PublishedItemType.Media:
+                            return umbracoContext.UrlProvider.GetMediaUrl(contentItem, mode, culture,
+                                Umbraco.Core.Constants.Conventions.Media.File);
+
+                        default:
+                            throw new NotSupportedException();
+                    }
                 }
             }
 
-            return null;
+            return item.Url;
         }
     }
 }
