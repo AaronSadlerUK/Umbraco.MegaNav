@@ -95,8 +95,15 @@ namespace AaronSadler.MegaNavV8.Core.ValueConverters
                             item.Title = umbracoContent.Name(item.Culture);
                         }
 
+                        if (!string.IsNullOrEmpty(item.Anchor))
+                        {
+                            item.Url = umbracoContent.Url(item.Culture) + $"{item.Anchor}";
+                        }
+                        else
+                        {
+                            item.Url = umbracoContent.Url(item.Culture);
+                        }
                         // set url to most recent from published cache
-                        item.Url = umbracoContent.Url(item.Culture);
                     }
                 }
 
