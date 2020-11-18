@@ -75,6 +75,7 @@
 
     function getItemEntities(items) {
         _.each(items, function (item) {
+            item.description = item.url;
             if (item.udi) {
                 meganavV8Resource.getById(item.udi, $routeParams.cculture ? $routeParams.cculture : $routeParams.mculture)
                     .then(function (response) {
@@ -97,6 +98,7 @@
             size: "small",
             currentTarget: item,
             submit: function (model) {
+                model.target.description = model.target.url + model.target.anchor;
                 if (model.target.anchor && model.target.anchor[0] !== '?' && model.target.anchor[0] !== '#') {
                     model.target.anchor = (model.target.anchor.indexOf('=') === -1 ? '#' : '?') + model.target.anchor;
                 }
@@ -136,10 +138,11 @@
             id: data.id,
             udi: data.udi,
             name: data.name,
+            description: data.description,
             collapsed: data.collapsed,
             title: data.title,
             target: data.target,
-            queryString: data.anchor,
+            anchor: data.anchor,
             url: url || "#",
             children: data.children || [],
             icon: data.icon || "icon-link",
