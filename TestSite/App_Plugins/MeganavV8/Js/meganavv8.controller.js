@@ -75,6 +75,7 @@
             size: "small",
             currentTarget: item,
             submit: function (model) {
+                model.target.description = model.target.url + model.target.anchor;
                 if (model.target.anchor && model.target.anchor[0] !== '?' && model.target.anchor[0] !== '#') {
                     model.target.anchor = (model.target.anchor.indexOf('=') === -1 ? '#' : '?') + model.target.anchor;
                 }
@@ -114,6 +115,7 @@
             id: data.id,
             udi: data.udi,
             name: data.name,
+            description: data.description,
             collapsed: data.collapsed,
             title: data.title,
             target: data.target,
