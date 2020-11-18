@@ -117,7 +117,7 @@
             collapsed: data.collapsed,
             title: data.title,
             target: data.target,
-            queryString: data.anchor,
+            anchor: data.anchor,
             url: url || "#",
             children: data.children || [],
             icon: data.icon || "icon-link",
