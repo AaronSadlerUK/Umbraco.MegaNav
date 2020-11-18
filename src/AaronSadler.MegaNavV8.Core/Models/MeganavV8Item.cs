@@ -10,7 +10,6 @@ namespace AaronSadler.MegaNavV8.Core.Models
     public class MeganavV8Item
     {
         public int Id { get; set; }
-
         public string Title { get; set; }
 
         public string Target { get; set; }
@@ -21,8 +20,6 @@ namespace AaronSadler.MegaNavV8.Core.Models
         [JsonIgnore]
         public IPublishedContent Content { get; set; }
 
-        #region Internal
-
         public IEnumerable<MeganavV8Item> Children { get; set; }
 
         [JsonIgnore]
@@ -30,11 +27,8 @@ namespace AaronSadler.MegaNavV8.Core.Models
 
         [JsonIgnore]
         public int Level { get; set; }
-        public bool Collapsed { get; set; }
 
         public GuidUdi Udi { get; set; }
         public string Culture { get; set; }
-
-        #endregion
     }
 }
