@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<umbPackage>
+  <info>
+    <package>
+      <name>MegaNavV8</name>
+      <version>8.2.0</version>
+      <iconUrl></iconUrl>
+      <licence url="https://opensource.org/licenses/MIT">MIT</licence>
+      <url>https://notacu.lt/meganavv8</url>
+      <requirements type="strict">
+        <major>8</major>
+        <minor>6</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>AaronSadlerUK</name>
+      <website>https://aaronsadler.dev</website>
+    </author>
+    <contributors>
+      <contributor>Callum Whyte</contributor>
+      <contributor>GlenIku</contributor>
+      <contributor>nzdev</contributor>
+    </contributors>
+    <readme><![CDATA[A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco]]></readme>
+  </info>
+  <files>
+  <folder path="../../src/AaronSadler.MegaNavV8.Web/Web/UI/App_Plugins/MeganavV8" orgPath="App_Plugins/MeganavV8" />
+  <file path="..\..\src\AaronSadler.MegaNavV8.Api\bin\Release\AaronSadler.MegaNavV8.Api.dll" orgPath="bin/AaronSadler.MegaNavV8.Api.dll" />
+  <file path="..\..\src\AaronSadler.MegaNavV8.Core\bin\Release\net472\AaronSadler.MegaNavV8.Core.dll" orgPath="bin/AaronSadler.MegaNavV8.Core.dll" />
+  </files>
+  <Actions />
+  <control />
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+</umbPackage>
