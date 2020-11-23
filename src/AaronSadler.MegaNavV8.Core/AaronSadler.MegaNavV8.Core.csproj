@@ -3,8 +3,8 @@
     <TargetFramework>net472</TargetFramework>
     <Configurations>Debug;Release;Staging</Configurations>
     <Version>8.2.0.0</Version>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Authors>Aaron Sadler, Callum Whyte</Authors>
     <Company>Aaron Sadler, Callum WhyteAaron Sadler, Callum Whyte</Company>
     <Product>MegaNavV8 Core</Product>
