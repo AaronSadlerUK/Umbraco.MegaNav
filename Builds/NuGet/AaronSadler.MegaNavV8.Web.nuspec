@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AaronSadler.MegaNavV8.Web</id>
-    <version>8.1.2</version>
+    <version>8.2.0</version>
     <title>Umbraco.MegaNavV8.Web</title>
     <authors>Aaron Sadler, Callum Whyte</authors>
     <owners>Aaron Sadler, Callum Whyte</owners>
@@ -12,13 +12,14 @@
     <icon>MegaNavV8-Logo.png</icon>
     <summary>A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco</summary>
     <description>A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco</description>
-    <releaseNotes><![CDATA[Fixed issue where a new mega nav requires as string, but an object is passed. - Pull Request #13, Thanks auroris!]]></releaseNotes>
+    <releaseNotes><![CDATA[Contains many tweaks and fixes, check GitHub for more info]]></releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>umbraco, umbraco-cms, MegaNav, MegaNav-V8</tags>
 	<dependencies>
-	  <dependency id="AaronSadler.MegaNavV8.Core" version="8.1.1" />
-	  <dependency id="AaronSadler.MegaNavV8.Api" version="8.1.1" />
+	  <dependency id="AaronSadler.MegaNavV8.Core" version="8.2.0" />
+	  <dependency id="AaronSadler.MegaNavV8.Api" version="8.2.0" />
     </dependencies>
+	<repository type="git" url="https://github.com/AaronSadlerUK/Umbraco.MegaNavV8.git" branch="master" />
   </metadata>
       <files>
 	  <file src="..\..\src\AaronSadler.MegaNavV8.Web\Web\UI\App_Plugins\MeganavV8\**\*.*" target="content\App_Plugins\MeganavV8\" /> 

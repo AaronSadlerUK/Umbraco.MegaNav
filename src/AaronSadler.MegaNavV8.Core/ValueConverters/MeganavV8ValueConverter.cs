@@ -50,13 +50,13 @@ namespace AaronSadler.MegaNavV8.Core.ValueConverters
 
             try
             {
-                var items = JsonConvert.DeserializeObject<IEnumerable<MeganavV8Item>>(inter.ToString());
+                var items = JsonConvert.DeserializeObject<IEnumerable<MegaNavV8InternalItem>>(inter.ToString());
 
                 return BuildMenu(items);
             }
             catch (Exception ex)
             {
-                _logger.Error<MeganavV8ValueConverter>("Failed to convert Meganav", ex);
+                _logger.Error<MeganavV8ValueConverter>("Failed to convert Meganav {ex}", ex);
             }
 
             return Enumerable.Empty<MeganavV8Item>();
@@ -73,7 +73,16 @@ namespace AaronSadler.MegaNavV8.Core.ValueConverters
                 // it's likely a content item
                 if (item.Id > 0)
                 {
-                    var umbracoContent = _publishedSnapshotAccessor.PublishedSnapshot.Content.GetById(item.Udi);
+                    IPublishedContent umbracoContent;
+
+                    if (item.Udi != null)
+                    {
+                        umbracoContent = _publishedSnapshotAccessor.PublishedSnapshot.Content.GetById(item.Udi);
+                    }
+                    else
+                    {
+                        umbracoContent = _publishedSnapshotAccessor.PublishedSnapshot.Content.GetById(item.Id);
+                    }
 
                     if (umbracoContent != null)
                     {
@@ -95,8 +104,15 @@ namespace AaronSadler.MegaNavV8.Core.ValueConverters
                             item.Title = umbracoContent.Name(item.Culture);
                         }
 
+                        if (!string.IsNullOrEmpty(item.Anchor))
+                        {
+                            item.Url = umbracoContent.Url(item.Culture) + $"{item.Anchor}";
+                        }
+                        else
+                        {
+                            item.Url = umbracoContent.Url(item.Culture);
+                        }
                         // set url to most recent from published cache
-                        item.Url = umbracoContent.Url(item.Culture);
                     }
                 }
 

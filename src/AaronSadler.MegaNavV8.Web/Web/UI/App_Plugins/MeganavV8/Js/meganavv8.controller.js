@@ -31,11 +31,34 @@
     };
 
     $scope.collapseAll = function () {
-        _.each($scope.items, function (c) { c.collapsed = true });
+        $scope.items.forEach(toggleChildrenTrue);
     };
 
     $scope.expandAll = function () {
-        _.each($scope.items, function (c) { c.collapsed = false });
+        $scope.items.forEach(toggleChildrenFalse);
+    };
+
+    function toggleChildrenTrue(item) {
+        item.collapsed = true;
+        if (item.children) {
+            item.children.forEach(toggleChildrenTrue);
+        }
+    }
+
+    function toggleChildrenFalse(item) {
+        item.collapsed = false;
+        if (item.children) {
+            item.children.forEach(toggleChildrenFalse);
+        }
+    }
+
+    $scope.showButtons = function () {
+        const maxDepth = $scope.model.config.maxDepth;
+        if (maxDepth === 0 || maxDepth > 1) {
+            return true;
+        }
+
+        return false;
     };
 
     $scope.remove = function (item) {
@@ -52,12 +75,13 @@
 
     function getItemEntities(items) {
         _.each(items, function (item) {
+            item.description = item.url;
             if (item.udi) {
                 meganavV8Resource.getById(item.udi, $routeParams.cculture ? $routeParams.cculture : $routeParams.mculture)
                     .then(function (response) {
                         angular.extend(item, response.data);
                     }
-                );
+                    );
 
                 if (item.children.length > 0) {
                     getItemEntities(item.children);
@@ -74,6 +98,7 @@
             size: "small",
             currentTarget: item,
             submit: function (model) {
+                model.target.description = model.target.url + model.target.anchor;
                 if (model.target.anchor && model.target.anchor[0] !== '?' && model.target.anchor[0] !== '#') {
                     model.target.anchor = (model.target.anchor.indexOf('=') === -1 ? '#' : '?') + model.target.anchor;
                 }
@@ -85,7 +110,7 @@
 
                             callback(model.target);
                         }
-                    );
+                        );
                 }
                 else {
                     callback(model.target);
@@ -113,10 +138,11 @@
             id: data.id,
             udi: data.udi,
             name: data.name,
+            description: data.description,
             collapsed: data.collapsed,
             title: data.title,
             target: data.target,
-            queryString: data.anchor,
+            anchor: data.anchor,
             url: url || "#",
             children: data.children || [],
             icon: data.icon || "icon-link",
@@ -127,6 +153,6 @@
     }
 }
 
-angular.module("umbraco").controller("Our.Umbraco.MeganavV8.MeganavController", MeganavV8);
+angular.module("umbraco").controller("AaronSadler.MeganavV8.MeganavController", MeganavV8);
 
 app.requires.push("ui.tree");

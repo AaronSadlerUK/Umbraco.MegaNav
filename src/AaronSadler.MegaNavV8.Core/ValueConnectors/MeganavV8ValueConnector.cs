@@ -16,6 +16,9 @@ namespace AaronSadler.MegaNavV8.Core.ValueConnectors
 
         public string ToArtifact(object value, PropertyType propertyType, ICollection<ArtifactDependency> dependencies)
         {
+            if (AppSettingsManager.GetDisableUmbracoCloudSync()) 
+                return null;
+
             var svalue = value as string;
             if (string.IsNullOrWhiteSpace(svalue) || !svalue.DetectIsJson())
             {
@@ -29,6 +32,9 @@ namespace AaronSadler.MegaNavV8.Core.ValueConnectors
 
         public object FromArtifact(string value, PropertyType propertyType, object currentValue)
         {
+            if (AppSettingsManager.GetDisableUmbracoCloudSync())
+                return null;
+
             return value;
         }
 
@@ -39,10 +45,13 @@ namespace AaronSadler.MegaNavV8.Core.ValueConnectors
         {
             foreach (var link in links)
             {
-                var validUdi = GuidUdi.TryParse(link.Value<string>("udi"), out var guidUdi);
-                if (validUdi)
+                if (!AppSettingsManager.GetDisableUmbracoCloudDependencySync())
                 {
-                    dependencies.Add(new ArtifactDependency(guidUdi, false, ArtifactDependencyMode.Exist));
+                    var validUdi = GuidUdi.TryParse(link.Value<string>("udi"), out var guidUdi);
+                    if (validUdi)
+                    {
+                        dependencies.Add(new ArtifactDependency(guidUdi, false, ArtifactDependencyMode.Exist));
+                    }
                 }
 
                 var children = link.Value<JArray>("children");

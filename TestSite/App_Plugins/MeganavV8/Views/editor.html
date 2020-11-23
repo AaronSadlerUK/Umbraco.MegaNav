@@ -1,5 +1,5 @@
-﻿<div ng-controller="Our.Umbraco.MeganavV8.MeganavController" class="meganav-editor">
-    <div class="meganav-editor-buttons">
+﻿<div ng-controller="AaronSadler.MeganavV8.MeganavController" class="meganav-editor">
+    <div class="meganav-editor-buttons" ng-if="showButtons()">
         <a class="btn btn-primary" ng-click="expandAll()">Expand all</a>
         <a class="btn btn-secondary" ng-click="collapseAll()">Collapse all</a>
     </div>
@@ -36,7 +36,7 @@
                     <div class="umb-node-preview__content">
 
                         <div class="umb-node-preview__name" ng-attr-title="{{item.title || item.name}}">{{ item.title || item.name }}</div>
-                        <div class="umb-node-preview__description" ng-if="item.url">{{ item.url }}</div>
+                        <div class="umb-node-preview__description" ng-if="item.description">{{ item.description }}</div>
                     </div>
                 </div>
                 <div class="umb-node-preview__actions">
