@@ -19,6 +19,7 @@
 	  <dependency id="AaronSadler.MegaNavV8.Core" version="8.2.0" />
 	  <dependency id="AaronSadler.MegaNavV8.Api" version="8.2.0" />
     </dependencies>
+	<repository type="git" url="https://github.com/AaronSadlerUK/Umbraco.MegaNavV8.git" branch="master" />
   </metadata>
       <files>
 	  <file src="..\..\src\AaronSadler.MegaNavV8.Web\Web\UI\App_Plugins\MeganavV8\**\*.*" target="content\App_Plugins\MeganavV8\" /> 
