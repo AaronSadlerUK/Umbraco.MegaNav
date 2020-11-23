@@ -138,7 +138,7 @@
             id: data.id,
             udi: data.udi,
             name: data.name,
-            description: data.description,
+            description: url,
             collapsed: data.collapsed,
             title: data.title,
             target: data.target,

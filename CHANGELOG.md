@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [8.2.1] - 2020-11-23
+### Fixed
+* Fixed issue where undefined is added to the url in the backoffice
+
 ## [8.2.0] - 2020-11-23
 ### Fixed
 * Expand / Collapse buttons are now hidden if MegaNavV8 is configured to 1 level
