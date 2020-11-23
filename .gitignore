@@ -382,3 +382,4 @@ MigrationBackup/
 **/App_Data/Models/ood.flag
 TestSite/App_Data/Models/
 */**/*.zip
+Builds/NuGet/NuGet.config
