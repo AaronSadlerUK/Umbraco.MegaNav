@@ -1,6 +1,21 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [8.2.0] - 2020-11-23
+### Fixed
+* Expand / Collapse buttons are now hidden if MegaNavV8 is configured to 1 level
+* Expand / Collapse buttons now work recursively
+* You can now set anchor links for Nodes as well as external links
+* Now supports node ids when migrated from Umbraco 7
+* Updated the angularjs controller name to match the project name
+
+### Improved
+* The dragging of menu items within the backoffice is requires more of a drag before changing levels
+
+### Added
+* Added the ability to disable Umbraco Cloud Sync either fully or partially
+* Umbraco package is now generated using UmbPack
+
 ## [8.1.2] - 2020-10-14
 ### Fixed
 Fixed issue where a new mega nav requires as string, but an object is passed. - Pull Request #13, Thanks auroris!

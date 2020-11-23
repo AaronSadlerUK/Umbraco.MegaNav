@@ -1,20 +1,8 @@
-[![Build Status](https://dev.azure.com/TerrabitHost/MegaNavV8/_apis/build/status/MegaNavV8-ASP.NET-CI?branchName=master)](https://dev.azure.com/TerrabitHost/MegaNavV8/_build/latest?definitionId=12&branchName=master)
-
 # Umbraco MeganavV8
-
-## [8.1.0] - 2020-10-02
-### Breaking Changes
-* Updated namespaces to align with current project name
-* Updated the project alias to align with the current project name
-
-```diff
-+ Once this version is installed, you will need to edit the document type, and re-select the property editor.
-+ Do not delete the property, just edit and then re-select MegaNavV8 from the property editor selection window.
-```
 
 ## Getting started
 
-This package is supported on Umbraco 8.4+.
+This package is supported on Umbraco 8.6+.
 
 ### Installation
 
@@ -28,6 +16,26 @@ To [install UI from NuGet](https://www.nuget.org/packages/AaronSadler.MegaNavV8.
 To [install Core from NuGet](https://www.nuget.org/packages/AaronSadler.MegaNavV8.Core/), run the following command in your instance of Visual Studio.
 
     PM> Install-Package AaronSadler.MegaNavV8.Core
+
+To [install api from NuGet](https://www.nuget.org/packages/AaronSadler.MegaNavV8.Api/), run the following command in your instance of Visual Studio.
+
+    PM> Install-Package AaronSadler.MegaNavV8.Api
+
+## Umbraco Cloud Supported
+
+MegaNavV8 fully supports Umbraco Cloud including the content synchroniser,it has been fully tested transferring and restoring between environments.
+
+## Configuration
+
+Since v8.2.0 it is possible to disable the Umbraco Cloud content sync, simply add the relevant AppSetting below into your Web.Config
+
+To fully disable sync, making the transfer and restore options redundant, simple add the following AppSetting (true | false)
+
+    <add key="DisableUmbracoCloudSync" value="true" />
+
+To partially disable sync so that the menu is transferred but not the dependencies, use the below AppSetting (true | false)
+    
+    <add key="DisableUmbracoCloudDependencySync" value="true" />
 
 ## Usage
 
@@ -65,6 +73,12 @@ To raise a new bug, create an issue on the GitHub repository. To fix a bug or ad
 
 ### Who do I talk to?
 This project is maintained by [Aaron Sadler](https://aaronsadler.uk) and contributors. If you have any questions about the project please contact me through [Twitter](https://twitter.com/AaronSadlerUK), or by raising an issue on GitHub.
+
+### Contributors
+
+* [auroris](https://github.com/auroris)
+* [nzdev](https://github.com/nzdev)
+* [GlenIku](https://github.com/GlenIku)
 
 ### A special #h5yr to the orignal author
 
