@@ -153,6 +153,6 @@
     }
 }
 
-angular.module("umbraco").controller("Our.Umbraco.MeganavV8.MeganavController", MeganavV8);
+angular.module("umbraco").controller("AaronSadler.MeganavV8.MeganavController", MeganavV8);
 
 app.requires.push("ui.tree");
