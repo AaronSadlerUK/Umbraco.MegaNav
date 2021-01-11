@@ -48,28 +48,38 @@
                 </div>
 
                 <div>
-                    <div ng-if="!vm.savings.show" class="muted"><em>{{vm.version}}</em></div>
                     <div ng-if="vm.savings.show">
                         {{vm.savings.title}}  {{vm.savings.message}}
                     </div>
                 </div>
             </div>
+
         </umb-box-content>
     </umb-box>
+
 
     <umb-box>
         <umb-box-content ng-if="vm.working || vm.reported">
             <usync-progress-view update="vm.update"
                                  status="vm.status"
-                                 hide-labels="false" />
+                                 hide-labels="false">
+            </usync-progress-view>
         </umb-box-content>
     </umb-box>
+
+    <div ng-if="vm.warnings.Message.length > 0" class="alert alert-{{vm.warnings.Type}}">
+        <span ng-bind-html="vm.warnings.Message"></span>
+        
+    </div>
+
+
 
     <div ng-if="vm.reported">
         <usync-report-view actions="vm.actions"
                            results="vm.results"
                            hide-action="true"
-                           hide-link="vm.hideLink" />
+                           hide-link="vm.hideLink">
+        </usync-report-view>
     </div>
 
 </div>
