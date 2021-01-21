@@ -74,13 +74,16 @@ namespace AaronSadler.MegaNavV8.Core.ValueConverters
                 if (item.Id > 0)
                 {
                     IPublishedContent umbracoContent;
+                    string currentCulture;
 
                     if (item.Udi != null)
                     {
+                        currentCulture = _publishedSnapshotAccessor.PublishedSnapshot.Content.GetById(item.Udi).GetCultureFromDomains();
                         umbracoContent = _publishedSnapshotAccessor.PublishedSnapshot.Content.GetById(item.Udi);
                     }
                     else
                     {
+                        currentCulture = _publishedSnapshotAccessor.PublishedSnapshot.Content.GetById(item.Udi).GetCultureFromDomains();
                         umbracoContent = _publishedSnapshotAccessor.PublishedSnapshot.Content.GetById(item.Id);
                     }
 
@@ -101,16 +104,16 @@ namespace AaronSadler.MegaNavV8.Core.ValueConverters
                         // set title to node name if no override is set
                         if (string.IsNullOrWhiteSpace(item.Title))
                         {
-                            item.Title = umbracoContent.Name(item.Culture);
+                            item.Title = umbracoContent.Name(currentCulture);
                         }
 
                         if (!string.IsNullOrEmpty(item.Anchor))
                         {
-                            item.Url = umbracoContent.Url(item.Culture) + $"{item.Anchor}";
+                            item.Url = umbracoContent.Url(currentCulture) + $"{item.Anchor}";
                         }
                         else
                         {
-                            item.Url = umbracoContent.Url(item.Culture);
+                            item.Url = umbracoContent.Url(currentCulture);
                         }
                         // set url to most recent from published cache
                     }
