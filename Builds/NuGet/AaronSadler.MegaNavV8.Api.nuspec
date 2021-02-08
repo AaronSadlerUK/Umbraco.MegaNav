@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AaronSadler.MegaNavV8.Api</id>
-    <version>8.2.0</version>
+    <version>8.2.2</version>
     <title>MegaNavV8 Api</title>
     <authors>Aaron Sadler, Callum Whyte</authors>
     <owners>Aaron Sadler, Callum Whyte</owners>
@@ -19,7 +19,7 @@
 	  <group targetFramework=".NETFramework4.7.2">
 		  <dependency id="UmbracoCms.Web" version="8.4.0" />
 		  <dependency id="UmbracoCms.Core" version="8.4.0" />
-		  <dependency id="AaronSadler.MegaNavV8.Core" version="8.2.0" />
+		  <dependency id="AaronSadler.MegaNavV8.Core" version="8.2.2" />
 	  </group>
     </dependencies>
 	<repository type="git" url="https://github.com/AaronSadlerUK/Umbraco.MegaNavV8.git" branch="master" />

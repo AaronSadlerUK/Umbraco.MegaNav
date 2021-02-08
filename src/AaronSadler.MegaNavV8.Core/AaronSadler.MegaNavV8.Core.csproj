@@ -14,6 +14,8 @@
     <RepositoryUrl></RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Copyright>Copyright 2020</Copyright>
+    <AssemblyVersion>8.2.2.0</AssemblyVersion>
+    <FileVersion>8.2.2.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="UmbracoCms.Web" Version="8.10.1" />
