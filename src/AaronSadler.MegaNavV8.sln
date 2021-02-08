@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AaronSadler.MegaNavV8.Core"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AaronSadler.MegaNavV8.Web", "AaronSadler.MegaNavV8.Web\AaronSadler.MegaNavV8.Web.csproj", "{CD05D171-8C1B-45FC-B177-0AB992F2518B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSite_Single_Language", "TestSite_Single_Language\TestSite_Single_Language.csproj", "{34CB4475-8142-4EC2-BAE0-7C84E8C72F27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,12 @@ Global
 		{CD05D171-8C1B-45FC-B177-0AB992F2518B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CD05D171-8C1B-45FC-B177-0AB992F2518B}.Staging|Any CPU.ActiveCfg = Debug|Any CPU
 		{CD05D171-8C1B-45FC-B177-0AB992F2518B}.Staging|Any CPU.Build.0 = Debug|Any CPU
+		{34CB4475-8142-4EC2-BAE0-7C84E8C72F27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34CB4475-8142-4EC2-BAE0-7C84E8C72F27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34CB4475-8142-4EC2-BAE0-7C84E8C72F27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34CB4475-8142-4EC2-BAE0-7C84E8C72F27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34CB4475-8142-4EC2-BAE0-7C84E8C72F27}.Staging|Any CPU.ActiveCfg = Debug|Any CPU
+		{34CB4475-8142-4EC2-BAE0-7C84E8C72F27}.Staging|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [8.2.2] - 2021-02-08
+### Fixed
+* Fixed issue where the incorrect culture variant was returned
+
 ## [8.2.1] - 2020-11-23
 ### Fixed
 * Fixed issue where undefined is added to the url in the backoffice

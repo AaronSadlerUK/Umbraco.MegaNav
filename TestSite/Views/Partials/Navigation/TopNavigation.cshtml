@@ -4,10 +4,10 @@
 @using Umbraco.Web;
 @{
     var site = Model.Root();
-    var megaNavV8Items = site.DescendantsOfType("mainNavigation").FirstOrDefault().Value<IEnumerable<MeganavV8Item>>("megaNavV8");
+    var megaNavV8Items = site.DescendantsOfType("megaNav").FirstOrDefault().Value<IEnumerable<MeganavV8Item>>("menu");
 }
 <!-- comment out the following line if you want to remove the root node name from the top navigation -->
 @foreach (var item in megaNavV8Items)
 {
-    <a class="nav-link" href="@item.Url(Culture, UrlMode.Default)" @if (!string.IsNullOrEmpty(item.Target)){<text>target="@item.Target"</text>}>@item.Title</a>
+    <a class="nav-link" href="@item.Url()" @if (!string.IsNullOrEmpty(item.Target)){<text>target="@item.Target"</text>}>@item.Title</a>
 }
