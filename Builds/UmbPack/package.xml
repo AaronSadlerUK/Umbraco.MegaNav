@@ -3,7 +3,7 @@
   <info>
     <package>
       <name>MegaNavV8</name>
-      <version>8.2.3</version>
+      <version>8.2.4</version>
       <iconUrl></iconUrl>
       <licence url="https://opensource.org/licenses/MIT">MIT</licence>
       <url>https://notacu.lt/meganavv8</url>
@@ -21,6 +21,7 @@
       <contributor>Callum Whyte</contributor>
       <contributor>GlenIku</contributor>
       <contributor>nzdev</contributor>
+	  <contributor>JordyDW</contributor>
     </contributors>
     <readme><![CDATA[A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco]]></readme>
   </info>
