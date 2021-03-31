@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [8.2.3] - 2021-03-31
+### Fixed
+* Fixed issue where a null exception would happen if the content item is removed
+
 ## [8.2.2] - 2021-02-08
 ### Fixed
 * Fixed issue where the incorrect culture variant was returned
