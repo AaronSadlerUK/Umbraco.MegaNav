@@ -78,12 +78,12 @@ namespace AaronSadler.MegaNavV8.Core.ValueConverters
 
                     if (item.Udi != null)
                     {
-                        currentCulture = _publishedSnapshotAccessor.PublishedSnapshot.Content.GetById(item.Udi).GetCultureFromDomains();
+                        currentCulture = _publishedSnapshotAccessor.PublishedSnapshot.Content.GetById(item.Udi)?.GetCultureFromDomains();
                         umbracoContent = _publishedSnapshotAccessor.PublishedSnapshot.Content.GetById(item.Udi);
                     }
                     else
                     {
-                        currentCulture = _publishedSnapshotAccessor.PublishedSnapshot.Content.GetById(item.Id).GetCultureFromDomains();
+                        currentCulture = _publishedSnapshotAccessor.PublishedSnapshot.Content.GetById(item.Id)?.GetCultureFromDomains();
                         umbracoContent = _publishedSnapshotAccessor.PublishedSnapshot.Content.GetById(item.Id);
                     }
 
