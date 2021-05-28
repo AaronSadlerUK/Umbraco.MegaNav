@@ -1,12 +1,14 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using AaronSadler.MegaNavV8.Core.Extensions
+@using AaronSadler.MegaNavV8.Core.Models
 @using Umbraco.Web;
 @{
-    var site = Model.Root();
-    var selection = site.Children.Where(x => x.IsVisible());
+    var mn8 = Model.Root().FirstChildOfType("megaNavV8");
+    var selection = mn8.Value<IEnumerable<MeganavV8Item>>("mn8");
 }
 <!-- comment out the following line if you want to remove the root node name from the top navigation -->
-<a class="nav-link @Html.Raw(Model.Id == site.Id ? "navi-link--active" : "")" href="@site.Url">@site.Name</a>
+@*<a class="nav-link @Html.Raw(Model.Id == site.Id ? "navi-link--active" : "")" href="@site.Url">@site.Name</a>*@
 @foreach (var item in selection)
 {
-    <a class="nav-link @(item.IsAncestorOrSelf(Model) ? "nav-link--active" : null)" href="@item.Url">@item.Name</a>
+    <a class="nav-link @(Model.Id == item.Id ? "nav-link--active" : null)" href="@item.Url()" target="@item.Target">@item.Title</a>
 }
