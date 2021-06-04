@@ -1,5 +1,8 @@
 # Umbraco MeganavV8
 
+## No longer maintained
+Due to issues with the original author, and a one sided story going around, I am no longer willing to maintain MegaNavV8 nor will there be a MegaNavV9
+
 ## Getting started
 
 This package is supported on Umbraco 8.6+.
