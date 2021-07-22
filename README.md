@@ -1,7 +1,7 @@
 # Umbraco MeganavV8
 
 ## No longer maintained
-Due to issues with the original author, and a one sided story going around, I am no longer willing to maintain MegaNavV8 nor will there be a MegaNavV9
+Please upgrade to [UmbNav-V8](https://github.com/AaronSadlerUK/Our.Umbraco.UmbNav-V8)
 
 ## Getting started
 
